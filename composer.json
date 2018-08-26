@@ -55,6 +55,9 @@
             "@update-oci",
             "@development-enable"
         ],
+        "post-install-cmd": [
+            "@update-oci"
+        ],
         "development-disable": "zf-development-mode disable",
         "development-enable": "zf-development-mode enable",
         "development-status": "zf-development-mode status",
