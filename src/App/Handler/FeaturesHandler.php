@@ -56,7 +56,13 @@ class FeaturesHandler implements RequestHandlerInterface
             }
         }
 
+        $file = 'data/osm-community-index-master/package.json';
+        $update = filemtime($file);
+        $json = json_decode(file_get_contents($file));
+
         $data = [
+            'update'   => $update,
+            'version'  => $json->version,
             'country'  => strlen($country) === 2 ? Locale::getDisplayRegion('-'.$country, $lang ?? 'en') : $country,
             'iframe'   => $iframe,
             'features' => $features,

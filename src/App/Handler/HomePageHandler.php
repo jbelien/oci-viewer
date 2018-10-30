@@ -82,9 +82,13 @@ class HomePageHandler implements RequestHandlerInterface
             }
         }
 
-        //var_dump($resources);
+        $file = 'data/osm-community-index-master/package.json';
+        $update = filemtime($file);
+        $json = json_decode(file_get_contents($file));
 
         $data = [
+            'update'    => $update,
+            'version'   => $json->version,
             'features'  => $features,
             'resources' => $resources,
         ];
