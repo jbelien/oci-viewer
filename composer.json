@@ -1,23 +1,8 @@
 {
     "name": "jbelien/oci-viewer",
-    "description": "OpenStreetMap Community Index Viewer",
     "type": "project",
+    "description": "OpenStreetMap Community Index Viewer",
     "license": "BSD-3-Clause",
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "zf": {
-            "component-whitelist": [
-                "zendframework/zend-expressive",
-                "zendframework/zend-expressive-helpers",
-                "zendframework/zend-expressive-router",
-                "zendframework/zend-httphandlerrunner",
-                "zendframework/zend-expressive-fastroute",
-                "zendframework/zend-expressive-platesrenderer"
-            ]
-        }
-    },
     "require": {
         "php": "^7.1",
         "ext-intl": "*",
@@ -34,11 +19,26 @@
         "zendframework/zend-stdlib": "^3.1"
     },
     "require-dev": {
+        "filp/whoops": "^2.1.12",
         "phpunit/phpunit": "^7.0.1",
         "squizlabs/php_codesniffer": "^2.9.1",
         "zendframework/zend-expressive-tooling": "^1.0",
-        "zfcampus/zf-development-mode": "^3.1",
-        "filp/whoops": "^2.1.12"
+        "zfcampus/zf-development-mode": "^3.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "zf": {
+            "component-whitelist": [
+                "zendframework/zend-expressive",
+                "zendframework/zend-expressive-helpers",
+                "zendframework/zend-expressive-router",
+                "zendframework/zend-httphandlerrunner",
+                "zendframework/zend-expressive-fastroute",
+                "zendframework/zend-expressive-platesrenderer"
+            ]
+        }
     },
     "autoload": {
         "psr-4": {
@@ -51,26 +51,26 @@
         }
     },
     "scripts": {
+        "post-install-cmd": [
+            "@update-oci"
+        ],
         "post-create-project-cmd": [
             "@update-oci",
             "@development-enable"
         ],
-        "post-install-cmd": [
-            "@update-oci"
-        ],
-        "development-disable": "zf-development-mode disable",
-        "development-enable": "zf-development-mode enable",
-        "development-status": "zf-development-mode status",
-        "expressive": "expressive --ansi",
+        "analyze": "phpstan analyze -l max -c ./phpstan.installer.neon ./src ./config",
         "check": [
             "@cs-check",
             "@test",
             "@analyze"
         ],
-        "analyze": "phpstan analyze -l max -c ./phpstan.installer.neon ./src ./config",
         "clear-config-cache": "php bin/clear-config-cache.php",
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
+        "development-disable": "zf-development-mode disable",
+        "development-enable": "zf-development-mode enable",
+        "development-status": "zf-development-mode status",
+        "expressive": "expressive --ansi",
         "serve": "php -S 0.0.0.0:8080 -t public/ -d display_errors=1",
         "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
