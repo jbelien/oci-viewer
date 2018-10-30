@@ -8,7 +8,6 @@ use Locale;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Symfony\Component\Yaml\Yaml;
 use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Expressive\Router\RouterInterface;
 use Zend\Expressive\Template\TemplateRendererInterface;
@@ -24,8 +23,8 @@ class FeaturesHandler implements RequestHandlerInterface
         TemplateRendererInterface $template = null,
         string $containerName
     ) {
-        $this->router        = $router;
-        $this->template      = $template;
+        $this->router = $router;
+        $this->template = $template;
         $this->containerName = $containerName;
     }
 
@@ -39,14 +38,14 @@ class FeaturesHandler implements RequestHandlerInterface
         $iframe = isset($params['iframe']);
 
         if ($group === $country) {
-            $directory = 'data/osm-community-index-master/features/' . $group;
+            $directory = 'data/osm-community-index-master/features/'.$group;
         } else {
-            $directory = 'data/osm-community-index-master/features/' . $group . '/' . $country;
+            $directory = 'data/osm-community-index-master/features/'.$group.'/'.$country;
         }
         $featuresFiles = [];
 
         if (file_exists($directory) && is_dir($directory)) {
-            $featuresFiles = glob($directory . '/*.geojson');
+            $featuresFiles = glob($directory.'/*.geojson');
         }
 
         $features = [];
@@ -58,9 +57,9 @@ class FeaturesHandler implements RequestHandlerInterface
         }
 
         $data = [
-            'country' => strlen($country) === 2 ? Locale::getDisplayRegion('-' . $country, $lang ?? 'en') : $country,
-            'iframe' => $iframe,
-            'features' => $features
+            'country'  => strlen($country) === 2 ? Locale::getDisplayRegion('-'.$country, $lang ?? 'en') : $country,
+            'iframe'   => $iframe,
+            'features' => $features,
         ];
 
         return new HtmlResponse($this->template->render('app::features', $data));

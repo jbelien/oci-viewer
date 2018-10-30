@@ -25,8 +25,8 @@ class HomePageHandler implements RequestHandlerInterface
         TemplateRendererInterface $template = null,
         string $containerName
     ) {
-        $this->router        = $router;
-        $this->template      = $template;
+        $this->router = $router;
+        $this->template = $template;
         $this->containerName = $containerName;
     }
 
@@ -36,10 +36,10 @@ class HomePageHandler implements RequestHandlerInterface
         $features = [];
 
         if (file_exists($directory) && is_dir($directory)) {
-            $groups = glob($directory . '/*', GLOB_ONLYDIR);
+            $groups = glob($directory.'/*', GLOB_ONLYDIR);
 
             foreach ($groups as $g) {
-                $glob = glob($directory . '/' . basename($g) . '/*', GLOB_ONLYDIR);
+                $glob = glob($directory.'/'.basename($g).'/*', GLOB_ONLYDIR);
 
                 $countries = [];
 
@@ -48,7 +48,7 @@ class HomePageHandler implements RequestHandlerInterface
                     if (strlen($country) === 2) {
                         $country = [
                             $country,
-                            Locale::getDisplayRegion('-' . $country, 'en'),
+                            Locale::getDisplayRegion('-'.$country, 'en'),
                         ];
                     }
                     $countries[] = $country;
@@ -61,10 +61,10 @@ class HomePageHandler implements RequestHandlerInterface
         $resources = [];
 
         if (file_exists($directory) && is_dir($directory)) {
-            $groups = glob($directory . '/*', GLOB_ONLYDIR);
+            $groups = glob($directory.'/*', GLOB_ONLYDIR);
 
             foreach ($groups as $g) {
-                $glob = glob($directory . '/' . basename($g) . '/*', GLOB_ONLYDIR);
+                $glob = glob($directory.'/'.basename($g).'/*', GLOB_ONLYDIR);
 
                 $countries = [];
 
@@ -73,7 +73,7 @@ class HomePageHandler implements RequestHandlerInterface
                     if (strlen($country) === 2) {
                         $country = [
                             $country,
-                            Locale::getDisplayRegion('-' . $country, 'en'),
+                            Locale::getDisplayRegion('-'.$country, 'en'),
                         ];
                     }
                     $countries[] = $country;
@@ -85,7 +85,7 @@ class HomePageHandler implements RequestHandlerInterface
         //var_dump($resources);
 
         $data = [
-            'features' => $features,
+            'features'  => $features,
             'resources' => $resources,
         ];
 

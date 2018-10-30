@@ -24,8 +24,8 @@ class ResourcesHandler implements RequestHandlerInterface
         TemplateRendererInterface $template = null,
         string $containerName
     ) {
-        $this->router        = $router;
-        $this->template      = $template;
+        $this->router = $router;
+        $this->template = $template;
         $this->containerName = $containerName;
     }
 
@@ -39,19 +39,19 @@ class ResourcesHandler implements RequestHandlerInterface
         $iframe = isset($params['iframe']);
 
         if ($group === $country) {
-            $directory = 'data/osm-community-index-master/resources/' . $group;
+            $directory = 'data/osm-community-index-master/resources/'.$group;
         } else {
-            $directory = 'data/osm-community-index-master/resources/' . $group . '/' . $country;
+            $directory = 'data/osm-community-index-master/resources/'.$group.'/'.$country;
         }
         $resourceFiles = [];
 
         if (file_exists($directory) && is_dir($directory)) {
-            $resourceFiles = glob($directory . '/*.json');
+            $resourceFiles = glob($directory.'/*.json');
         }
 
         $i18n = null;
         if (!is_null($lang)) {
-            $i18nFile = 'data/osm-community-index-master/i18n/' . $lang . '.yaml';
+            $i18nFile = 'data/osm-community-index-master/i18n/'.$lang.'.yaml';
 
             if (file_exists($i18nFile) && is_readable($i18nFile)) {
                 $yaml = Yaml::parseFile($i18nFile);
@@ -81,7 +81,7 @@ class ResourcesHandler implements RequestHandlerInterface
                 if (preg_match_all('/{([a-zA-Z]+)}/', $description, $matches) > 0) {
                     foreach ($matches[1] as $match) {
                         if (isset($resource->{$match})) {
-                            $description = str_replace('{' . $match . '}', $resource->{$match}, $description);
+                            $description = str_replace('{'.$match.'}', $resource->{$match}, $description);
                         }
                     }
                 }
@@ -90,33 +90,33 @@ class ResourcesHandler implements RequestHandlerInterface
                 if (preg_match_all('/{([a-zA-Z]+)}/', $extendedDescription, $matches) > 0) {
                     foreach ($matches[1] as $match) {
                         if (isset($resource->{$match})) {
-                            $extendedDescription = str_replace('{' . $match . '}', $resource->{$match}, $extendedDescription);
+                            $extendedDescription = str_replace('{'.$match.'}', $resource->{$match}, $extendedDescription);
                         }
                     }
                 }
 
                 $image = null;
-                $imageFile = 'data/osm-community-index-master/dist/img/' . $resource->type . '.svg';
+                $imageFile = 'data/osm-community-index-master/dist/img/'.$resource->type.'.svg';
                 if (file_exists($imageFile) && is_readable($imageFile)) {
                     $image = file_get_contents($imageFile);
                 }
 
-                $resources[$resource->id] = (object)[
-                    'description' => $description,
+                $resources[$resource->id] = (object) [
+                    'description'         => $description,
                     'extendedDescription' => $extendedDescription,
-                    'image' => $image,
-                    'languages' => $languages,
-                    'name' => $i18n[$resource->id]['name'] ?? $resource->name,
-                    'url' => $resource->url,
+                    'image'               => $image,
+                    'languages'           => $languages,
+                    'name'                => $i18n[$resource->id]['name'] ?? $resource->name,
+                    'url'                 => $resource->url,
                 ];
             }
         }
 
         $data = [
-            'country' => strlen($country) === 2 ? Locale::getDisplayRegion('-' . $country, $lang ?? 'en') : $country,
-            'iframe' => $iframe,
-            'i18n' => $i18n,
-            'resources' => $resources
+            'country'   => strlen($country) === 2 ? Locale::getDisplayRegion('-'.$country, $lang ?? 'en') : $country,
+            'iframe'    => $iframe,
+            'i18n'      => $i18n,
+            'resources' => $resources,
         ];
 
         return new HtmlResponse($this->template->render('app::resources', $data));
