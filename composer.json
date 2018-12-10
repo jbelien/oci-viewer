@@ -51,9 +51,6 @@
         }
     },
     "scripts": {
-        "post-install-cmd": [
-            "@update-oci"
-        ],
         "post-create-project-cmd": [
             "@update-oci",
             "@development-enable"
