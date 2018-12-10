@@ -22,7 +22,7 @@ class HomePageHandler implements RequestHandlerInterface
 
     public function __construct(
         RouterInterface $router,
-        TemplateRendererInterface $template = null,
+        TemplateRendererInterface $template,
         string $containerName
     ) {
         $this->router = $router;
