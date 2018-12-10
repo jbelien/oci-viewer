@@ -10,6 +10,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Expressive\Router\RouterInterface;
+use Zend\Expressive\Router\RouteResult;
 use Zend\Expressive\Template\TemplateRendererInterface;
 
 class HomePageHandler implements RequestHandlerInterface
@@ -32,6 +33,9 @@ class HomePageHandler implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
+        $route = $request->getAttribute(RouteResult::class);
+        $routeName = $route->getMatchedRouteName();
+
         $directory = 'data/osm-community-index-master/features';
         $features = [];
 
@@ -93,6 +97,21 @@ class HomePageHandler implements RequestHandlerInterface
             'resources' => $resources,
         ];
 
-        return new HtmlResponse($this->template->render('app::home-page', $data));
+        switch ($routeName) {
+            case 'home.resources':
+                $templateName = 'app::home-page-resources';
+                break;
+
+            case 'home.features':
+                $templateName = 'app::home-page-features';
+                break;
+
+            case 'home':
+            default:
+                $templateName = 'app::home-page';
+                break;
+        }
+
+        return new HtmlResponse($this->template->render($templateName, $data));
     }
 }
