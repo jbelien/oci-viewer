@@ -1,12 +1,8 @@
 <div class="input-group mb-3">
     <select class="form-control" name="resources">
         {% for group, countries in resources %}
+        {% if countries is not empty %}
         <optgroup label="{{ group | capitalize }}">
-            {% if countries is empty %}
-            <option value="{{ group }}/{{ group }}">
-                {{ group | capitalize }}
-            </option>
-            {% else %}
             {% for country in countries %}
             {% if country is iterable %}
             <option value="{{ group }}/{{ country[0] }}">
@@ -18,8 +14,8 @@
             </option>
             {% endif %}
             {% endfor %}
-            {% endif %}
         </optgroup>
+        {% endif %}
         {% endfor %}
     </select>
     <div class="input-group-append">
