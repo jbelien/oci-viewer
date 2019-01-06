@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
-use Locale;
+use App\Model\Country;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
@@ -12,7 +12,6 @@ use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Expressive\Router\RouteResult;
 use Zend\Expressive\Router\RouterInterface;
 use Zend\Expressive\Template\TemplateRendererInterface;
-use App\Model\Country;
 
 class HomePageHandler implements RequestHandlerInterface
 {
