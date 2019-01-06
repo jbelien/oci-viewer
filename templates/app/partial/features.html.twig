@@ -1,18 +1,18 @@
 <div class="input-group mb-3">
     <select class="form-control" name="features">
+        <option value="world/world">World</option>
         {% for group, countries in features %}
         {% if countries is not empty %}
         <optgroup label="{{ group | capitalize }}">
             {% for country in countries %}
-            {% if country is iterable %}
-            <option value="{{ group }}/{{ country[0] }}">
-                {{ country[1] | replace({"_": " "}) | capitalize }}
+            <option value="{{ country.directory }}">
+                {{ country.emoji }}
+                {% if country.native != country.name %}
+                {{ country.native }} ({{ country.name }})
+                {% else %}
+                {{ country.name }}
+                {% endif %}
             </option>
-            {% else %}
-            <option value="{{ group }}/{{ country }}">
-                {{ country | replace({"_": " "}) | capitalize }}
-            </option>
-            {% endif %}
             {% endfor %}
         </optgroup>
         {% endif %}

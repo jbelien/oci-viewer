@@ -12,8 +12,9 @@ class Country
     private $name;
     private $native;
     private $emoji;
+    private $directory;
 
-    public function __construct(string $name, string $lang = 'en')
+    public function __construct(string $name, string $lang = 'en', ?string $directory = null)
     {
         $json = json_decode(file_get_contents('vendor/annexare/countries-list/dist/countries.emoji.min.json'), true);
 
@@ -29,7 +30,7 @@ class Country
                 $this->code = current(array_keys($list));
                 $country = $list[$this->code];
             } else {
-                $this->code = '';
+                $this->code = '??';
             }
         }
 
@@ -41,6 +42,23 @@ class Country
         } else {
             $this->name = ucwords($name);
         }
+
+        $this->directory = $directory;
+    }
+
+    public function getCode() : string
+    {
+        return $this->code;
+    }
+
+    public function getDirectory() : ?string
+    {
+        return $this->directory;
+    }
+
+    public function getEmoji() : ?string
+    {
+        return $this->emoji;
     }
 
     public function getName() : string
@@ -48,13 +66,8 @@ class Country
         return $this->name;
     }
 
-    public function getNative() : string
+    public function getNative() : ?string
     {
-        return $this->native ?? '';
-    }
-
-    public function getEmoji() : string
-    {
-        return $this->emoji ?? '';
+        return $this->native;
     }
 }

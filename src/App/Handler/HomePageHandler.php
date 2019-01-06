@@ -12,6 +12,7 @@ use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Expressive\Router\RouteResult;
 use Zend\Expressive\Router\RouterInterface;
 use Zend\Expressive\Template\TemplateRendererInterface;
+use App\Model\Country;
 
 class HomePageHandler implements RequestHandlerInterface
 {
@@ -46,16 +47,12 @@ class HomePageHandler implements RequestHandlerInterface
                 $glob = glob($directory.'/'.basename($g).'/*', GLOB_ONLYDIR);
 
                 $countries = [];
-
                 foreach ($glob as $dir) {
-                    $country = basename($dir);
-                    if (strlen($country) === 2) {
-                        $country = [
-                            $country,
-                            Locale::getDisplayRegion('-'.$country, 'en'),
-                        ];
-                    }
-                    $countries[] = $country;
+                    $countries[] = new Country(
+                        str_replace('_', ' ', basename($dir)),
+                        $lang ?? 'en',
+                        basename(dirname($dir)).'/'.basename($dir)
+                    );
                 }
                 $features[basename($g)] = $countries;
             }
@@ -71,16 +68,12 @@ class HomePageHandler implements RequestHandlerInterface
                 $glob = glob($directory.'/'.basename($g).'/*', GLOB_ONLYDIR);
 
                 $countries = [];
-
                 foreach ($glob as $dir) {
-                    $country = basename($dir);
-                    if (strlen($country) === 2) {
-                        $country = [
-                            $country,
-                            Locale::getDisplayRegion('-'.$country, 'en'),
-                        ];
-                    }
-                    $countries[] = $country;
+                    $countries[] = new Country(
+                        str_replace('_', ' ', basename($dir)),
+                        $lang ?? 'en',
+                        basename(dirname($dir)).'/'.basename($dir)
+                    );
                 }
                 $resources[basename($g)] = $countries;
             }
