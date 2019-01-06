@@ -1,0 +1,22 @@
+<div class="input-group mb-3">
+    <select class="form-control" name="features">
+        {% for group, countries in features %}
+        <optgroup label="{{ group | capitalize }}">
+            {% for country in countries %}
+            {% if country is iterable %}
+            <option value="{{ group }}/{{ country[0] }}">
+                {{ country[1] | capitalize }}
+            </option>
+            {% else %}
+            <option value="{{ group }}/{{ country }}">
+                {{ country | capitalize }}
+            </option>
+            {% endif %}
+            {% endfor %}
+        </optgroup>
+        {% endfor %}
+    </select>
+    <div class="input-group-append">
+        <button class="btn btn-outline-primary" type="submit">Go</button>
+    </div>
+</div>

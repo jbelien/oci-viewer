@@ -1,0 +1,35 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block javascript %}
+<script>
+    $('#form-features').on('submit', function (event) {
+        event.preventDefault();
+        location.assign('/features/' + $('select[name=features]').val());
+    });
+    $('#form-resources').on('submit', function (event) {
+        event.preventDefault();
+        location.assign('/resources/' + $('select[name=resources]').val());
+    });
+</script>
+{% endblock %}
+
+{% block content %}
+<h1 class="mt-3">OpenStreetMap Community Index</h1>
+<hr>
+<p>💬 An index of community resources for OpenStreetMap.</p>
+<hr>
+<div class="row">
+    <div class="col">
+        <h2>Resources</h2>
+        <form id="form-resources" autocomplete="off">
+            {{ include('@app/partial/resources.html.twig') }}
+        </form>
+    </div>
+    <div class="col">
+        <h2>Features</h2>
+        <form id="form-features" autocomplete="off">
+            {{ include('@app/partial/features.html.twig') }}
+        </form>
+    </div>
+</div>
+{% endblock %}

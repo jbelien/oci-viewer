@@ -13,15 +13,15 @@ $cacheConfig = [
 ];
 
 $aggregator = new ConfigAggregator([
-    \Zend\Expressive\Router\FastRouteRouter\ConfigProvider::class,
-    \Zend\HttpHandlerRunner\ConfigProvider::class,
-    \Zend\Expressive\Plates\ConfigProvider::class,
     // Include cache configuration
     new ArrayProvider($cacheConfig),
 
     \Zend\Expressive\Helper\ConfigProvider::class,
     \Zend\Expressive\ConfigProvider::class,
     \Zend\Expressive\Router\ConfigProvider::class,
+    \Zend\Expressive\Router\FastRouteRouter\ConfigProvider::class,
+    \Zend\Expressive\Twig\ConfigProvider::class,
+    \Zend\HttpHandlerRunner\ConfigProvider::class,
 
     // Default App module config
     App\ConfigProvider::class,

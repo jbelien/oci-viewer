@@ -1,0 +1,55 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block stylesheet %}
+<style>
+    h2>svg {
+        height: 0.9rem;
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+{% if iframe == false %}
+<h1 class="mt-3">
+    {{ country | capitalize }}
+</h1>
+<hr>
+{% endif %}
+
+<ul class="list-group my-3">
+    {% for id, resource in resources %}
+    <li class="list-group-item">
+        <div class="d-flex w-100 justify-content-between">
+            <h2 class="h5 mb-1">
+                {% if resource.image is not null %}
+                {{ resource.image | raw }}
+                {% endif %}
+
+                <a href="{{ resource.url }}" target="_blank">
+                    {{ resource.name }}
+                </a>
+            </h2>
+            {% if resource.languages is not empty %}
+            <div>
+                {% for code, language in resource.languages %}
+                <span class="badge badge-secondary" title="{{ language }}" style="cursor: help;">
+                    {{ code }}
+                </span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <p class="mb-1">
+            {{ resource.description }}
+        </p>
+        {% if resource.extendedDescription is not empty %}
+        <small>
+            {{ resource.extendedDescription }}
+        </small>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
