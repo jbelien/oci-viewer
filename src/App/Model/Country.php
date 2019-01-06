@@ -47,10 +47,12 @@ class Country
     {
         return $this->name;
     }
+
     public function getNative() : string
     {
         return $this->native ?? '';
     }
+
     public function getEmoji() : string
     {
         return $this->emoji ?? '';
