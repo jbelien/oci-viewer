@@ -13,7 +13,12 @@
 
 {% if iframe == false %}
 <h1 class="mt-3">
-    {{ country | capitalize }}
+    {{ country.emoji }}
+    {% if country.native != country.name %}
+    {{ country.native }} ({{ country.name }})
+    {% else %}
+    {{ country.name }}
+    {% endif %}
 </h1>
 <hr>
 {% endif %}

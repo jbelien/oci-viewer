@@ -4,8 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32dcaa87ec0eaa850971ca0141e5aa03",
+    "content-hash": "9abab9cef73b0e75128b147a288f4abc",
     "packages": [
+        {
+            "name": "annexare/countries-list",
+            "version": "2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/annexare/Countries.git",
+                "reference": "a387dddecad9801d6f4827d4c5363d209c8bdfae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/annexare/Countries/zipball/a387dddecad9801d6f4827d4c5363d209c8bdfae",
+                "reference": "a387dddecad9801d6f4827d4c5363d209c8bdfae",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dmytro",
+                    "email": "z@annexare.com",
+                    "homepage": "https://github.com/z-ax"
+                }
+            ],
+            "description": "Continents & countries: ISO 3166-1 alpha-2 code, name, ISO 639-1 languages, capital, currency, native name, phone. JSON, CSV and SQL.",
+            "homepage": "http://annexare.github.io/Countries/",
+            "keywords": [
+                "ISO 3166-1",
+                "ISO 639-1",
+                "capital",
+                "continent",
+                "countries",
+                "country",
+                "csv",
+                "currency",
+                "data",
+                "emoji",
+                "json",
+                "languages",
+                "node",
+                "sql"
+            ],
+            "time": "2019-01-02T12:58:28+00:00"
+        },
         {
             "name": "container-interop/container-interop",
             "version": "1.2.0",

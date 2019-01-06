@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
+use App\Model\Country;
 use Locale;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -119,7 +120,7 @@ class ResourcesHandler implements RequestHandlerInterface
         $data = [
             'update'    => $update,
             'version'   => $json->version,
-            'country'   => strlen($country) === 2 ? Locale::getDisplayRegion('-'.$country, $lang ?? 'en') : $country,
+            'country'   => new Country(str_replace('_', ' ', $country), $lang ?? 'en'),
             'iframe'    => $iframe,
             'i18n'      => $i18n,
             'resources' => $resources,

@@ -6,6 +6,7 @@
     "require": {
         "php": "^7.1",
         "ext-intl": "*",
+        "annexare/countries-list": "^2.4",
         "roave/security-advisories": "dev-master",
         "symfony/yaml": "4.2.1",
         "zendframework/zend-component-installer": "2.1.1",
