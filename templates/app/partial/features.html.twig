@@ -6,11 +6,11 @@
             {% for country in countries %}
             {% if country is iterable %}
             <option value="{{ group }}/{{ country[0] }}">
-                {{ country[1] | capitalize }}
+                {{ country[1] | replace({"_": " "}) | capitalize }}
             </option>
             {% else %}
             <option value="{{ group }}/{{ country }}">
-                {{ country | capitalize }}
+                {{ country | replace({"_": " "}) | capitalize }}
             </option>
             {% endif %}
             {% endfor %}
