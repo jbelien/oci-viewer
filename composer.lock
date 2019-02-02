@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9abab9cef73b0e75128b147a288f4abc",
+    "content-hash": "adb83e39ba85a57360c8649acec95305",
     "packages": [
         {
             "name": "annexare/countries-list",
@@ -1438,16 +1438,16 @@
         },
         {
             "name": "zendframework/zend-expressive-twigrenderer",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-expressive-twigrenderer.git",
-                "reference": "1579d78e8de265574d2f0401207c3b436e826e55"
+                "reference": "b913efdb3155d74dcd7e1909bd4f03fbe2b578e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-expressive-twigrenderer/zipball/1579d78e8de265574d2f0401207c3b436e826e55",
-                "reference": "1579d78e8de265574d2f0401207c3b436e826e55",
+                "url": "https://api.github.com/repos/zendframework/zend-expressive-twigrenderer/zipball/b913efdb3155d74dcd7e1909bd4f03fbe2b578e3",
+                "reference": "b913efdb3155d74dcd7e1909bd4f03fbe2b578e3",
                 "shasum": ""
             },
             "require": {
@@ -1469,8 +1469,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2.x-dev",
-                    "dev-develop": "2.3.x-dev"
+                    "dev-master": "2.3.x-dev",
+                    "dev-develop": "2.4.x-dev"
                 },
                 "zf": {
                     "config-provider": "Zend\\Expressive\\Twig\\ConfigProvider"
@@ -1497,7 +1497,7 @@
                 "zend-expressive",
                 "zf"
             ],
-            "time": "2018-11-19T17:38:37+00:00"
+            "time": "2019-01-23T17:35:01+00:00"
         },
         {
             "name": "zendframework/zend-httphandlerrunner",
