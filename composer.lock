@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8181bf8eb71dc92a9d66a648bc57d2ad",
+    "content-hash": "61214899a513771172c92e1f4a32b2e3",
     "packages": [
         {
             "name": "annexare/countries-list",
@@ -442,12 +442,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "db876706aacd4ffbd1c253358d19a651e50e65c2"
+                "reference": "4e04718428742618a4bf24dafca45b8645c9320d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/db876706aacd4ffbd1c253358d19a651e50e65c2",
-                "reference": "db876706aacd4ffbd1c253358d19a651e50e65c2",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/4e04718428742618a4bf24dafca45b8645c9320d",
+                "reference": "4e04718428742618a4bf24dafca45b8645c9320d",
                 "shasum": ""
             },
             "conflict": {
@@ -482,8 +482,8 @@
                 "doctrine/mongodb-odm-bundle": ">=2,<3.0.1",
                 "doctrine/orm": ">=2,<2.4.8|>=2.5,<2.5.1",
                 "dompdf/dompdf": ">=0.6,<0.6.2",
-                "drupal/core": ">=7,<7.60|>=8,<8.5.8|>=8.6,<8.6.2",
-                "drupal/drupal": ">=7,<7.60|>=8,<8.5.8|>=8.6,<8.6.2",
+                "drupal/core": ">=7,<7.62|>=8,<8.5.11|>=8.6,<8.6.10",
+                "drupal/drupal": ">=7,<7.62|>=8,<8.5.11|>=8.6,<8.6.10",
                 "erusev/parsedown": "<1.7",
                 "ezsystems/ezpublish-kernel": ">=5.3,<5.3.12.1|>=5.4,<5.4.13.1|>=6,<6.7.9.1|>=6.8,<6.13.5.1|>=7,<7.2.4.1|>=7.3,<7.3.2.1",
                 "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.6|>=5.4,<5.4.12.3|>=2011,<2017.12.4.3|>=2018.6,<2018.6.1.4|>=2018.9,<2018.9.1.3",
@@ -542,7 +542,7 @@
                 "shopware/shopware": "<5.3.7",
                 "silverstripe/cms": ">=3,<=3.0.11|>=3.1,<3.1.11",
                 "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
-                "silverstripe/framework": ">=3,<3.3",
+                "silverstripe/framework": ">=3,<3.6.7|>=3.7,<3.7.3|>=4,<4.0.7|>=4.1,<4.1.5|>=4.2,<4.2.4|>=4.3,<4.3.1",
                 "silverstripe/userforms": "<3",
                 "simple-updates/phpwhois": "<=1",
                 "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
@@ -638,7 +638,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-01-22T18:37:22+00:00"
+            "time": "2019-02-26T21:14:50+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -685,7 +685,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -1262,16 +1262,16 @@
         },
         {
             "name": "zendframework/zend-expressive-helpers",
-            "version": "5.1.2",
+            "version": "5.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-expressive-helpers.git",
-                "reference": "c4db15318ae53965794f46618535fc61dd058ea7"
+                "reference": "8c078dd74d75b97a680b036114712dedb35b85b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-expressive-helpers/zipball/c4db15318ae53965794f46618535fc61dd058ea7",
-                "reference": "c4db15318ae53965794f46618535fc61dd058ea7",
+                "url": "https://api.github.com/repos/zendframework/zend-expressive-helpers/zipball/8c078dd74d75b97a680b036114712dedb35b85b6",
+                "reference": "8c078dd74d75b97a680b036114712dedb35b85b6",
                 "shasum": ""
             },
             "require": {
@@ -1318,7 +1318,7 @@
                 "zend-expressive",
                 "zf"
             ],
-            "time": "2018-07-26T20:05:23+00:00"
+            "time": "2019-02-27T16:42:27+00:00"
         },
         {
             "name": "zendframework/zend-expressive-router",
