@@ -72,6 +72,13 @@
         "serve": "php -S 0.0.0.0:8080 -t public/ -d display_errors=1",
         "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
-        "update-oci": "wget https://github.com/osmlab/osm-community-index/archive/master.zip -O data/oci.zip && unzip -o data/oci.zip -d data/ && rm data/oci.zip"
+        "update-oci": [
+            "@oci:clean",
+            "@oci:download",
+            "@oci:unzip"
+        ],
+        "oci:clean": "rm -r data/osm-community-index-master",
+        "oci:download": "wget https://github.com/osmlab/osm-community-index/archive/master.zip -O data/oci.zip",
+        "oci:unzip": "unzip -o data/oci.zip -d data/ && rm data/oci.zip"
     }
 }
