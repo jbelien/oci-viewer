@@ -109,6 +109,7 @@ class ResourcesHandler implements RequestHandlerInterface
                     'languages'           => $languages,
                     'name'                => $i18n[$resource->id]['name'] ?? $resource->name,
                     'url'                 => $resource->url,
+                    'order'               => $resource->order ?? 0,
                 ];
             }
         }

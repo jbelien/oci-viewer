@@ -23,7 +23,7 @@
 {% endif %}
 
 <ul class="list-group my-3">
-    {% for id, resource in resources %}
+    {% for id, resource in resources|sort((a, b) => a.order <=> b.order)|reverse %}
     <li class="list-group-item">
         <div class="d-flex w-100 justify-content-between">
             <h2 class="h5 mb-1">
