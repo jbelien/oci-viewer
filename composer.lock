@@ -442,12 +442,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "1dfa887a7e87ba9b7c635299462554b9ad241d5b"
+                "reference": "eb59d9f35a47f567ae15e7179d7c666489cd4b85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/1dfa887a7e87ba9b7c635299462554b9ad241d5b",
-                "reference": "1dfa887a7e87ba9b7c635299462554b9ad241d5b",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/eb59d9f35a47f567ae15e7179d7c666489cd4b85",
+                "reference": "eb59d9f35a47f567ae15e7179d7c666489cd4b85",
                 "shasum": ""
             },
             "conflict": {
@@ -470,7 +470,6 @@
                 "contao/core": ">=2,<3.5.39",
                 "contao/core-bundle": ">=4,<4.4.39|>=4.5,<4.7.5",
                 "contao/listing-bundle": ">=4,<4.4.8",
-                "contao/newsletter-bundle": ">=4,<4.1",
                 "datadog/dd-trace": ">=0.30,<0.30.2",
                 "david-garcia/phpwhois": "<=4.3.1",
                 "doctrine/annotations": ">=1,<1.2.7",
@@ -514,9 +513,9 @@
                 "laravel/framework": ">=4,<4.0.99|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.42|>=5.6,<5.6.30",
                 "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
                 "league/commonmark": "<0.18.3",
-                "magento/magento1ce": "<1.9.4.1",
-                "magento/magento1ee": ">=1.9,<1.14.4.1",
-                "magento/product-community-edition": ">=2,<2.2.8|>=2.3,<2.3.1",
+                "magento/magento1ce": "<1.9.4.3",
+                "magento/magento1ee": ">=1,<1.14.4.3",
+                "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.3",
                 "monolog/monolog": ">=1.8,<1.12",
                 "namshi/jose": "<2.2",
                 "onelogin/php-saml": "<2.10.4",
@@ -651,7 +650,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-09-26T17:56:56+00:00"
+            "time": "2019-10-09T14:04:58+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -831,16 +830,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.11.3",
+            "version": "v2.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "699ed2342557c88789a15402de5eb834dedd6792"
+                "reference": "ddd4134af9bfc6dba4eff7c8447444ecc45b9ee5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/699ed2342557c88789a15402de5eb834dedd6792",
-                "reference": "699ed2342557c88789a15402de5eb834dedd6792",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ddd4134af9bfc6dba4eff7c8447444ecc45b9ee5",
+                "reference": "ddd4134af9bfc6dba4eff7c8447444ecc45b9ee5",
                 "shasum": ""
             },
             "require": {
@@ -850,13 +849,13 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "^2.7",
-                "symfony/phpunit-bridge": "^3.4.19|^4.1.8|^5.0"
+                "symfony/debug": "^3.4|^4.2",
+                "symfony/phpunit-bridge": "^4.4@dev|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.11-dev"
+                    "dev-master": "2.12-dev"
                 }
             },
             "autoload": {
@@ -879,14 +878,14 @@
                     "role": "Lead Developer"
                 },
                 {
-                    "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com",
-                    "role": "Project Founder"
-                },
-                {
                     "name": "Twig Team",
                     "homepage": "https://twig.symfony.com/contributors",
                     "role": "Contributors"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -894,7 +893,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-06-18T15:37:11+00:00"
+            "time": "2019-10-17T07:34:53+00:00"
         },
         {
             "name": "zendframework/zend-component-installer",
@@ -1335,16 +1334,16 @@
         },
         {
             "name": "zendframework/zend-expressive-router",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-expressive-router.git",
-                "reference": "072d6b0620f7e1e616cb60062425b4eedd1a0447"
+                "reference": "e76e6abd277c73268d27d92f7b385991e86488b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-expressive-router/zipball/072d6b0620f7e1e616cb60062425b4eedd1a0447",
-                "reference": "072d6b0620f7e1e616cb60062425b4eedd1a0447",
+                "url": "https://api.github.com/repos/zendframework/zend-expressive-router/zipball/e76e6abd277c73268d27d92f7b385991e86488b9",
+                "reference": "e76e6abd277c73268d27d92f7b385991e86488b9",
                 "shasum": ""
             },
             "require": {
@@ -1356,7 +1355,7 @@
             },
             "require-dev": {
                 "malukenho/docheader": "^0.1.6",
-                "phpunit/phpunit": "^7.0.2",
+                "phpunit/phpunit": "^7.5.16 || ^8.4.1",
                 "zendframework/zend-coding-standard": "~1.0.0"
             },
             "suggest": {
@@ -1394,7 +1393,7 @@
                 "zend-expressive",
                 "zf"
             ],
-            "time": "2018-06-05T15:28:00+00:00"
+            "time": "2019-10-16T20:06:55+00:00"
         },
         {
             "name": "zendframework/zend-expressive-template",
@@ -1514,16 +1513,16 @@
         },
         {
             "name": "zendframework/zend-httphandlerrunner",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-httphandlerrunner.git",
-                "reference": "5e4c1e82a8bb1585020eafd32c49ece5a6ee98df"
+                "reference": "75fb12751fe9d6e392cce1ee0d687dacae2db787"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-httphandlerrunner/zipball/5e4c1e82a8bb1585020eafd32c49ece5a6ee98df",
-                "reference": "5e4c1e82a8bb1585020eafd32c49ece5a6ee98df",
+                "url": "https://api.github.com/repos/zendframework/zend-httphandlerrunner/zipball/75fb12751fe9d6e392cce1ee0d687dacae2db787",
+                "reference": "75fb12751fe9d6e392cce1ee0d687dacae2db787",
                 "shasum": ""
             },
             "require": {
@@ -1533,14 +1532,15 @@
                 "psr/http-server-handler": "^1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.3",
+                "phpunit/phpunit": "^7.0.2",
                 "zendframework/zend-coding-standard": "~1.0.0",
-                "zendframework/zend-diactoros": "^1.7"
+                "zendframework/zend-diactoros": "^1.7 || ^2.1.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1.x-dev",
+                    "dev-develop": "1.2.x-dev"
                 },
                 "zf": {
                     "config-provider": "Zend\\HttpHandlerRunner\\ConfigProvider"
@@ -1564,7 +1564,7 @@
                 "psr-7",
                 "zf"
             ],
-            "time": "2018-02-21T20:33:02+00:00"
+            "time": "2019-02-19T18:20:34+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -1915,34 +1915,35 @@
         },
         {
             "name": "ocramius/package-versions",
-            "version": "1.4.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/PackageVersions.git",
-                "reference": "a4d4b60d0e60da2487bd21a2c6ac089f85570dbb"
+                "reference": "1d32342b8c1eb27353c8887c366147b4c2da673c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/PackageVersions/zipball/a4d4b60d0e60da2487bd21a2c6ac089f85570dbb",
-                "reference": "a4d4b60d0e60da2487bd21a2c6ac089f85570dbb",
+                "url": "https://api.github.com/repos/Ocramius/PackageVersions/zipball/1d32342b8c1eb27353c8887c366147b4c2da673c",
+                "reference": "1d32342b8c1eb27353c8887c366147b4c2da673c",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0.0",
-                "php": "^7.1.0"
+                "php": "^7.3.0"
             },
             "require-dev": {
-                "composer/composer": "^1.6.3",
-                "doctrine/coding-standard": "^5.0.1",
+                "composer/composer": "^1.8.6",
+                "doctrine/coding-standard": "^6.0.0",
                 "ext-zip": "*",
-                "infection/infection": "^0.7.1",
-                "phpunit/phpunit": "^7.0.0"
+                "infection/infection": "^0.13.4",
+                "phpunit/phpunit": "^8.2.5",
+                "vimeo/psalm": "^3.4.9"
             },
             "type": "composer-plugin",
             "extra": {
                 "class": "PackageVersions\\Installer",
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "1.6.x-dev"
                 }
             },
             "autoload": {
@@ -1961,7 +1962,7 @@
                 }
             ],
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
-            "time": "2019-02-21T12:16:21+00:00"
+            "time": "2019-07-17T15:49:50+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -2217,22 +2218,22 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.8.1",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "1927e75f4ed19131ec9bcc3b002e07fb1173ee76"
+                "reference": "f6811d96d97bdf400077a0cc100ae56aa32b9203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/1927e75f4ed19131ec9bcc3b002e07fb1173ee76",
-                "reference": "1927e75f4ed19131ec9bcc3b002e07fb1173ee76",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/f6811d96d97bdf400077a0cc100ae56aa32b9203",
+                "reference": "f6811d96d97bdf400077a0cc100ae56aa32b9203",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
-                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0",
+                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0|^5.0",
                 "sebastian/comparator": "^1.1|^2.0|^3.0",
                 "sebastian/recursion-context": "^1.0|^2.0|^3.0"
             },
@@ -2276,7 +2277,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2019-06-13T12:50:23+00:00"
+            "time": "2019-10-03T11:07:50+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2532,16 +2533,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.3.5",
+            "version": "8.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "302faed7059fde575cf3403a78c730c5e3a62750"
+                "reference": "366a4a0f2b971fd43b7c351d621e8dd7d7131869"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/302faed7059fde575cf3403a78c730c5e3a62750",
-                "reference": "302faed7059fde575cf3403a78c730c5e3a62750",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/366a4a0f2b971fd43b7c351d621e8dd7d7131869",
+                "reference": "366a4a0f2b971fd43b7c351d621e8dd7d7131869",
                 "shasum": ""
             },
             "require": {
@@ -2585,7 +2586,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "8.3-dev"
+                    "dev-master": "8.4-dev"
                 }
             },
             "autoload": {
@@ -2611,7 +2612,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-09-14T09:12:03+00:00"
+            "time": "2019-10-07T12:57:41+00:00"
         },
         {
             "name": "psr/log",
@@ -3277,16 +3278,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.0",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "0afebf16a2e7f1e434920fa976253576151effe9"
+                "reference": "82cd0f854ceca17731d6d019c7098e3755c45060"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/0afebf16a2e7f1e434920fa976253576151effe9",
-                "reference": "0afebf16a2e7f1e434920fa976253576151effe9",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/82cd0f854ceca17731d6d019c7098e3755c45060",
+                "reference": "82cd0f854ceca17731d6d019c7098e3755c45060",
                 "shasum": ""
             },
             "require": {
@@ -3324,20 +3325,20 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-09-26T23:12:26+00:00"
+            "time": "2019-10-16T21:14:26+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v4.3.4",
+            "version": "v4.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "de63799239b3881b8a08f8481b22348f77ed7b36"
+                "reference": "929ddf360d401b958f611d44e726094ab46a7369"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/de63799239b3881b8a08f8481b22348f77ed7b36",
-                "reference": "de63799239b3881b8a08f8481b22348f77ed7b36",
+                "url": "https://api.github.com/repos/symfony/console/zipball/929ddf360d401b958f611d44e726094ab46a7369",
+                "reference": "929ddf360d401b958f611d44e726094ab46a7369",
                 "shasum": ""
             },
             "require": {
@@ -3399,7 +3400,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-26T08:26:39+00:00"
+            "time": "2019-10-07T12:36:49+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
@@ -3461,16 +3462,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v1.1.6",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3"
+                "reference": "ffcde9615dc5bb4825b9f6aed07716f1f57faae0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
-                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ffcde9615dc5bb4825b9f6aed07716f1f57faae0",
+                "reference": "ffcde9615dc5bb4825b9f6aed07716f1f57faae0",
                 "shasum": ""
             },
             "require": {
@@ -3515,7 +3516,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2019-08-20T14:44:19+00:00"
+            "time": "2019-09-17T11:12:18+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -3609,16 +3610,16 @@
         },
         {
             "name": "zendframework/zend-code",
-            "version": "3.3.2",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-code.git",
-                "reference": "936fa7ad4d53897ea3e3eb41b5b760828246a20b"
+                "reference": "46feaeecea14161734b56c1ace74f28cb329f194"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/936fa7ad4d53897ea3e3eb41b5b760828246a20b",
-                "reference": "936fa7ad4d53897ea3e3eb41b5b760828246a20b",
+                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/46feaeecea14161734b56c1ace74f28cb329f194",
+                "reference": "46feaeecea14161734b56c1ace74f28cb329f194",
                 "shasum": ""
             },
             "require": {
@@ -3628,7 +3629,7 @@
             "require-dev": {
                 "doctrine/annotations": "^1.0",
                 "ext-phar": "*",
-                "phpunit/phpunit": "^7.5.15",
+                "phpunit/phpunit": "^7.5.16 || ^8.4",
                 "zendframework/zend-coding-standard": "^1.0",
                 "zendframework/zend-stdlib": "^2.7 || ^3.0"
             },
@@ -3639,8 +3640,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3.x-dev",
-                    "dev-develop": "3.4.x-dev"
+                    "dev-master": "3.4.x-dev",
+                    "dev-develop": "3.5.x-dev"
                 }
             },
             "autoload": {
@@ -3658,7 +3659,7 @@
                 "code",
                 "zf"
             ],
-            "time": "2019-08-31T14:14:34+00:00"
+            "time": "2019-10-05T23:18:22+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
