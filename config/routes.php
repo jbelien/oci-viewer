@@ -32,10 +32,9 @@ use Zend\Expressive\MiddlewareFactory;
  *     'contact'
  * );
  */
-return function (Application $app, MiddlewareFactory $factory, ContainerInterface $container) : void {
+
+return function (Application $app, MiddlewareFactory $factory, ContainerInterface $container): void {
     $app->get('/', App\Handler\HomePageHandler::class, 'home');
-    $app->get('/resources', App\Handler\HomePageHandler::class, 'home.resources');
-    $app->get('/features', App\Handler\HomePageHandler::class, 'home.features');
     $app->get('/resources/{group}/{country}[/{lang}]', App\Handler\ResourcesHandler::class, 'resources');
     $app->get('/features/{group}/{country}[/{lang}]', App\Handler\FeaturesHandler::class, 'features');
 };

@@ -34,7 +34,6 @@ class HomePageHandler implements RequestHandlerInterface
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
         $route = $request->getAttribute(RouteResult::class);
-        $routeName = $route->getMatchedRouteName();
 
         $directory = 'data/osm-community-index-master/features';
         $features = [];
@@ -89,21 +88,6 @@ class HomePageHandler implements RequestHandlerInterface
             'resources' => $resources,
         ];
 
-        switch ($routeName) {
-            case 'home.resources':
-                $templateName = 'app::home-page-resources';
-                break;
-
-            case 'home.features':
-                $templateName = 'app::home-page-features';
-                break;
-
-            case 'home':
-            default:
-                $templateName = 'app::home-page';
-                break;
-        }
-
-        return new HtmlResponse($this->template->render($templateName, $data));
+        return new HtmlResponse($this->template->render('app::home-page', $data));
     }
 }
