@@ -39,17 +39,17 @@ class HomePageHandler implements RequestHandlerInterface
         $features = [];
 
         if (file_exists($directory) && is_dir($directory)) {
-            $groups = glob($directory . '/*', GLOB_ONLYDIR);
+            $groups = glob($directory.'/*', GLOB_ONLYDIR);
 
             foreach ($groups as $g) {
-                $glob = glob($directory . '/' . basename($g) . '/*', GLOB_ONLYDIR);
+                $glob = glob($directory.'/'.basename($g).'/*', GLOB_ONLYDIR);
 
                 $countries = [];
                 foreach ($glob as $dir) {
                     $countries[] = new Country(
                         str_replace('_', ' ', basename($dir)),
                         $lang ?? 'en',
-                        basename(dirname($dir)) . '/' . basename($dir)
+                        basename(dirname($dir)).'/'.basename($dir)
                     );
                 }
                 $features[basename($g)] = $countries;
@@ -60,17 +60,17 @@ class HomePageHandler implements RequestHandlerInterface
         $resources = [];
 
         if (file_exists($directory) && is_dir($directory)) {
-            $groups = glob($directory . '/*', GLOB_ONLYDIR);
+            $groups = glob($directory.'/*', GLOB_ONLYDIR);
 
             foreach ($groups as $g) {
-                $glob = glob($directory . '/' . basename($g) . '/*', GLOB_ONLYDIR);
+                $glob = glob($directory.'/'.basename($g).'/*', GLOB_ONLYDIR);
 
                 $countries = [];
                 foreach ($glob as $dir) {
                     $countries[] = new Country(
                         str_replace('_', ' ', basename($dir)),
                         $lang ?? 'en',
-                        basename(dirname($dir)) . '/' . basename($dir)
+                        basename(dirname($dir)).'/'.basename($dir)
                     );
                 }
                 $resources[basename($g)] = $countries;
@@ -86,7 +86,7 @@ class HomePageHandler implements RequestHandlerInterface
             'version'   => $json->version,
             'features'  => $features,
             'resources' => $resources,
-            'combined' => file_get_contents('data/osm-community-index-master/dist/combined.min.geojson'),
+            'combined'  => file_get_contents('data/osm-community-index-master/dist/combined.min.geojson'),
         ];
 
         return new HtmlResponse($this->template->render('app::home-page', $data));
