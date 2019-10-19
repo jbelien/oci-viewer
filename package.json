@@ -1,0 +1,16 @@
+{
+  "name": "oci-viewer",
+  "devDependencies": {
+    "@types/ol": "^5.3.6",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "ol": "^6.0.1"
+  },
+  "scripts": {
+    "build": "parcel build --out-dir=public/ --global map resources/javascript/index.ts --no-source-maps",
+    "watch": "parcel watch --out-dir=public/ --global map resources/javascript/index.ts"
+  }
+}

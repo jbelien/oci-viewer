@@ -2,6 +2,10 @@
 composer.phar
 vendor/
 
+# NPM files
+.cache/
+node_modules/
+
 # Local configs
 config/autoload/*.local.php
 
