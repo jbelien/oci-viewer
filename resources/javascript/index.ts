@@ -64,7 +64,7 @@ import GeoJSON from "ol/format/GeoJSON";
 
       features.forEach((feature: Feature) => {
         const id = feature.getId();
-        const resources = feature.getProperties();
+        const { resources } = feature.getProperties();
 
         Object.values(resources).forEach((resource: Object) => {
           if (typeof resource.name !== "undefined") {
@@ -122,17 +122,20 @@ import GeoJSON from "ol/format/GeoJSON";
       const features: GeoJSON.Feature[] = JSON.parse(JSON.stringify(geojson.features)); // Is it really the best way to copy without reference ?
 
       features.forEach((feature: GeoJSON.Feature) => {
-        let properties: Object = {};
+        let properties: Object = {
+          area: feature.properties.area,
+          resources: {}
+        };
         let key: string;
 
-        for (key in feature.properties) {
-          if (feature.properties.hasOwnProperty(key) && feature.properties[key].type === type) {
-            properties[key] = feature.properties[key];
+        for (key in feature.properties.resources) {
+          if (feature.properties.resources.hasOwnProperty(key) && feature.properties.resources[key].type === type) {
+            properties.resources[key] = feature.properties.resources[key];
           }
         }
 
-        if (Object.values(properties).length > 0) {
-          feature.properties = properties;
+        if (Object.values(properties.resources).length > 0) {
+          feature.properties.resources = properties.resources;
 
           collection.features.push(Object.assign({}, feature));
         }
