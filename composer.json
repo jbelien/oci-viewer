@@ -70,7 +70,7 @@
         "development-status": "zf-development-mode status",
         "expressive": "expressive --ansi",
         "oci:build": "cd data/osm-community-index-master && npm install && npm test && rm -rf node_modules/",
-        "oci:clean": "rm -r data/osm-community-index-master",
+        "oci:clean": "rm -rf data/osm-community-index-master",
         "oci:download": "wget https://github.com/osmlab/osm-community-index/archive/master.zip -O data/oci.zip",
         "oci:unzip": "unzip -o data/oci.zip -d data/ && rm data/oci.zip",
         "serve": "php -S 0.0.0.0:8080 -t public/ -d display_errors=1",
