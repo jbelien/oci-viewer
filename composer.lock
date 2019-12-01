@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe6f07d3728ef7f3cb2f7d063cbdfbf7",
+    "content-hash": "26f534d701b2ec715f21b77f3aa622de",
     "packages": [
         {
             "name": "annexare/countries-list",
@@ -715,16 +715,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.12.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17"
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/b42a2f66e8f1b15ccf25652c3424265923eb4f17",
-                "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7b4aab9743c30be783b73de055d24a39cf4b954f",
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f",
                 "shasum": ""
             },
             "require": {
@@ -736,7 +736,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.12-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -770,7 +770,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-08-06T08:03:45+00:00"
+            "time": "2019-11-27T14:18:11+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -833,38 +833,35 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.12.1",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "ddd4134af9bfc6dba4eff7c8447444ecc45b9ee5"
+                "reference": "9b58bb8ac7a41d72fbb5a7dc643e07923e5ccc26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ddd4134af9bfc6dba4eff7c8447444ecc45b9ee5",
-                "reference": "ddd4134af9bfc6dba4eff7c8447444ecc45b9ee5",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9b58bb8ac7a41d72fbb5a7dc643e07923e5ccc26",
+                "reference": "9b58bb8ac7a41d72fbb5a7dc643e07923e5ccc26",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0",
+                "php": "^7.2.9",
                 "symfony/polyfill-ctype": "^1.8",
                 "symfony/polyfill-mbstring": "^1.3"
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "^3.4|^4.2",
+                "symfony/debug": "^3.4|^4.2|^5.0",
                 "symfony/phpunit-bridge": "^4.4@dev|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.12-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Twig_": "lib/"
-                },
                 "psr-4": {
                     "Twig\\": "src/"
                 }
@@ -896,7 +893,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-10-17T07:34:53+00:00"
+            "time": "2019-11-15T20:38:32+00:00"
         },
         {
             "name": "zendframework/zend-component-installer",
@@ -1454,22 +1451,22 @@
         },
         {
             "name": "zendframework/zend-expressive-twigrenderer",
-            "version": "2.4.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-expressive-twigrenderer.git",
-                "reference": "17df00d1025362c7bfe743e7b9f51be2838a0181"
+                "reference": "e87a7b10800c48b85e46df627054c194429e01b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-expressive-twigrenderer/zipball/17df00d1025362c7bfe743e7b9f51be2838a0181",
-                "reference": "17df00d1025362c7bfe743e7b9f51be2838a0181",
+                "url": "https://api.github.com/repos/zendframework/zend-expressive-twigrenderer/zipball/e87a7b10800c48b85e46df627054c194429e01b9",
+                "reference": "e87a7b10800c48b85e46df627054c194429e01b9",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1",
                 "psr/container": "^1.0",
-                "twig/twig": "^1.34 | ^2.4",
+                "twig/twig": "^1.34 || ^2.4 || ^3.0",
                 "zendframework/zend-expressive-helpers": "^5.0",
                 "zendframework/zend-expressive-router": "^3.0",
                 "zendframework/zend-expressive-template": "^2.0"
@@ -1479,14 +1476,14 @@
             },
             "require-dev": {
                 "malukenho/docheader": "^0.1.5",
-                "phpunit/phpunit": "^7.0.2",
+                "phpunit/phpunit": "^7.5.17 || ^8.4.3",
                 "zendframework/zend-coding-standard": "~1.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4.x-dev",
-                    "dev-develop": "2.5.x-dev"
+                    "dev-master": "2.5.x-dev",
+                    "dev-develop": "2.6.x-dev"
                 },
                 "zf": {
                     "config-provider": "Zend\\Expressive\\Twig\\ConfigProvider"
@@ -1513,7 +1510,7 @@
                 "zend-expressive",
                 "zf"
             ],
-            "time": "2019-06-12T15:06:52+00:00"
+            "time": "2019-11-26T10:22:15+00:00"
         },
         {
             "name": "zendframework/zend-httphandlerrunner",
