@@ -28,7 +28,7 @@ class FeaturesHandler implements RequestHandlerInterface
         $this->containerName = $containerName;
     }
 
-    public function handle(ServerRequestInterface $request) : ResponseInterface
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $group = $request->getAttribute('group');
         $country = $request->getAttribute('country');
