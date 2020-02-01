@@ -46,27 +46,27 @@ class Country
         $this->directory = $directory;
     }
 
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->code;
     }
 
-    public function getDirectory() : ?string
+    public function getDirectory(): ?string
     {
         return $this->directory;
     }
 
-    public function getEmoji() : ?string
+    public function getEmoji(): ?string
     {
         return $this->emoji;
     }
 
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function getNative() : ?string
+    public function getNative(): ?string
     {
         return $this->native;
     }
