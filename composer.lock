@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "annexare/countries-list",
-            "version": "2.5.1",
+            "version": "2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/annexare/Countries.git",
-                "reference": "026e91048ba309935d1209ef90dd26c8ef95680b"
+                "reference": "38711a4b191738a531519a2408528def4fbd159a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/annexare/Countries/zipball/026e91048ba309935d1209ef90dd26c8ef95680b",
-                "reference": "026e91048ba309935d1209ef90dd26c8ef95680b",
+                "url": "https://api.github.com/repos/annexare/Countries/zipball/38711a4b191738a531519a2408528def4fbd159a",
+                "reference": "38711a4b191738a531519a2408528def4fbd159a",
                 "shasum": ""
             },
             "type": "library",
@@ -50,7 +50,7 @@
                 "node",
                 "sql"
             ],
-            "time": "2020-01-31T13:34:08+00:00"
+            "time": "2020-02-26T10:53:45+00:00"
         },
         {
             "name": "container-interop/container-interop",
