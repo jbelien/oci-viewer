@@ -8,7 +8,7 @@
         "ext-intl": "*",
         "annexare/countries-list": "^2.4",
         "roave/security-advisories": "dev-master",
-        "symfony/yaml": "5.0.7",
+        "symfony/yaml": "5.0.8",
         "zendframework/zend-component-installer": "2.1.2",
         "zendframework/zend-config-aggregator": "1.2.0",
         "zendframework/zend-diactoros": "2.2.1",
