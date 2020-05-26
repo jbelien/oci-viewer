@@ -19,6 +19,7 @@ import svgSlack from "../../data/osm-community-index-master/dist/img/slack.svg";
 import svgTelegram from "../../data/osm-community-index-master/dist/img/telegram.svg";
 import svgTwitter from "../../data/osm-community-index-master/dist/img/twitter.svg";
 import svgWiki from "../../data/osm-community-index-master/dist/img/wiki.svg";
+import svgXMPP from "../../data/osm-community-index-master/dist/img/xmpp.svg";
 import svgYouthMappers from "../../data/osm-community-index-master/dist/img/youthmappers.svg";
 import svgYouTube from "../../data/osm-community-index-master/dist/img/youtube.svg";
 
@@ -90,6 +91,7 @@ import GeoJSON from "ol/format/GeoJSON";
               case "telegram": icon = svgTelegram; break;
               case "twitter": icon = svgTwitter; break;
               case "wiki": icon = svgWiki; break;
+              case "xmpp": icon = svgXMPP; break;
               case "youthmappers": icon = svgYouthMappers; break;
               case "youtube": icon = svgYouTube; break;
             }
