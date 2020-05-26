@@ -7,7 +7,7 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "ol": "^6.0.1"
+    "ol": "^6.3.1"
   },
   "scripts": {
     "build": "parcel build --out-dir=public/ --global map resources/javascript/index.ts --no-source-maps",
