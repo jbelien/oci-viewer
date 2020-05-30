@@ -9,6 +9,7 @@
     "oci:info": "node build-info.js",
     "oci:icons": "rm -rf static/icons/ && mkdir -p static/icons/ && cp node_modules/osm-community-index/dist/img/* static/icons/",
     "oci:resource": "rm -rf static/data/resources/ && node build-resource.js",
+    "ol:css": "rm -f static/ol.css && cp node_modules/ol/ol.css static/",
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",

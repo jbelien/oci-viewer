@@ -1,3 +1,5 @@
+@import "ol.css";
+
 body {
   --height-nav: 56px;
   --height-footer: 56px;

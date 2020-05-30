@@ -2,7 +2,6 @@
     import Map from "../components/Map.svelte";
 
     export async function preload({ params }) {
-
         const res = await this.fetch("combined.min.geojson");
         const data = await res.json();
 
@@ -38,8 +37,6 @@
 
 <svelte:head>
     <title>OpenStreetMap Community Index</title>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css" type="text/css">
 </svelte:head>
 
 <style>

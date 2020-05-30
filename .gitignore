@@ -8,3 +8,4 @@ yarn-error.log
 /static/icons/
 /static/combined.min.geojson
 /static/oci.json
+/static/ol.css
