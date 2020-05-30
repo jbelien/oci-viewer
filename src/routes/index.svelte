@@ -64,7 +64,6 @@
             </label>
             <select id="filter-type" class="form-control form-control-sm" bind:value={type} on:change={applyFilter}>
                 <option value="">Show all</option>
-                <option value="aparat">آپارات (Aparat)</option>
                 <option value="discord">Discord</option>
                 <option value="discourse">Discourse</option>
                 <option value="facebook">Facebook</option>
@@ -85,6 +84,7 @@
                 <option value="xmpp">XMPP</option>
                 <option value="youthmappers">Youth Mappers</option>
                 <option value="youtube">YouTube</option>
+                <option value="aparat">آپارات (Aparat)</option>
             </select>
         </div>
         <div id="resources-list" bind:this={list} class="flex-fill"></div>
