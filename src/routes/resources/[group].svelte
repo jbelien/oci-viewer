@@ -26,7 +26,7 @@
     <title>{group.toUpperCase()}</title>
 </svelte:head>
 
-<h1 class="mt-3">{group.toUpperCase()}</h1>
+<h1 class="pt-3">{group.toUpperCase()}</h1>
 
 {#if data.countries.length > 0}
 <h2>Countries</h2>
