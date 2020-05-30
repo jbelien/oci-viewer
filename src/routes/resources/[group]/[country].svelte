@@ -28,7 +28,7 @@
     <title>{country.toUpperCase()} - {group.toUpperCase()}</title>
 </svelte:head>
 
-<h1 class="mt-3">{group.toUpperCase()}</h1>
+<h1 class="pt-3">{group.toUpperCase()}</h1>
 <h2>
     {country.toUpperCase()}
     <span class="badge badge-pill badge-info">{resources.length}</span>
