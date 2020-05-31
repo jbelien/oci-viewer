@@ -7,5 +7,4 @@ yarn-error.log
 /data/
 /static/icons/
 /static/combined.min.geojson
-/static/oci.json
 /static/ol.css

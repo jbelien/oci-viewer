@@ -1,5 +1,5 @@
-const colors = require("colors/safe");
-const fs = require("fs");
+import colors from "colors/safe";
+import fs from "fs";
 
 const types = {
   discord: "Discord",
@@ -44,13 +44,15 @@ schemaResource.properties.type.enum.forEach((type) => {
   }
 });
 
-// Write result
-fs.writeFileSync(
-  "static/oci.json",
-  JSON.stringify({
-    version,
-    types,
-  }),
-);
+export function get(req, res, next) {
+  res.writeHead(200, {
+    "Content-Type": "application/json",
+  });
 
-process.stdout.write(`✅ static/oci.json\n`);
+  res.end(
+    JSON.stringify({
+      version,
+      types,
+    }),
+  );
+}
