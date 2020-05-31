@@ -10,7 +10,11 @@ function getCountries(group) {
       const fname = path.basename(filename, path.extname(filename));
       const country = fname.replace(/_/g, " ").toUpperCase();
 
-      countries.push({ name: country, slug: fname, count: JSON.parse(content).length });
+      countries.push({
+        name: country,
+        slug: fname.replace(/'/g, "%27"), // replace() is required to handle "cote_d'_ivoire" correctly in export
+        count: JSON.parse(content).length,
+      });
     });
   }
 
