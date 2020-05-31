@@ -1,15 +1,25 @@
 <script context="module">
     import Map from "../components/Map.svelte";
     import CombinedLayer from "../components/CombinedLayer.svelte";
+    import TypeFilter from "../components/TypeFilter.svelte";
+
+    export async function preload({ params }) {
+        const res = await this.fetch("oci.json");
+        const { types } = await res.json();
+
+        if (res.status === 200) {
+            return { types };
+        } else {
+            this.error(res.status);
+        }
+    }
 </script>
 
 <script>
+    export let types;
+
     let list;
     let type;
-
-    function applyFilter() {
-        list.innerHTML = "";
-    }
 </script>
 
 <svelte:head>
@@ -34,35 +44,7 @@
         </Map>
     </div>
     <div class="col d-flex flex-column">
-        <form class="form-group mt-3" autocomplete="off">
-            <label for="filter-type" class="mr-2">
-                Filter:
-            </label>
-            <select id="filter-type" class="form-control form-control-sm" bind:value={type} on:change={applyFilter}>
-                <option value="">Show all</option>
-                <option value="discord">Discord</option>
-                <option value="discourse">Discourse</option>
-                <option value="facebook">Facebook</option>
-                <option value="forum">Forum</option>
-                <option value="github">GitHub</option>
-                <option value="group">Group</option>
-                <option value="irc">IRC</option>
-                <option value="mailinglist">Mailing-list</option>
-                <option value="matrix">Matrix</option>
-                <option value="meetup">Meetup</option>
-                <option value="osm">OpenStreetMap</option>
-                <option value="osm-lc">OpenStreetMap Local Chapter</option>
-                <option value="reddit">Reddit</option>
-                <option value="slack">Slack</option>
-                <option value="telegram">Telegram</option>
-                <option value="twitter">Twitter</option>
-                <option value="wiki">Wiki</option>
-                <option value="xmpp">XMPP</option>
-                <option value="youthmappers">Youth Mappers</option>
-                <option value="youtube">YouTube</option>
-                <option value="aparat">آپارات (Aparat)</option>
-            </select>
-        </form>
+        <TypeFilter bind:type={type} {types} {list} />
         <div id="resources-list" bind:this={list} class="flex-fill"></div>
     </div>
 </div>
