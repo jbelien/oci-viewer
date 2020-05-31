@@ -1,5 +1,6 @@
 <script context="module">
-    import Map from "../components/Map.svelte";
+    import Nav from '../components/Nav.svelte';
+    import Footer from '../components/Footer.svelte';
 
     export async function preload({ params }) {
         const res = await this.fetch("oci.json");
@@ -14,9 +15,6 @@
 </script>
 
 <script>
-    import Nav from '../components/Nav.svelte';
-    import Footer from '../components/Footer.svelte';
-
     export let segment;
     export let version;
 </script>

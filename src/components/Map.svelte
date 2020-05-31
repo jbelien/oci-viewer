@@ -1,28 +1,24 @@
 <script>
-    import { onMount, afterUpdate } from 'svelte';
+    import { onMount, setContext } from "svelte";
 
-    export let collection;
-    export let container;
-    export let layer;
-    export let map;
+    import { map as mapContextKey } from "../imports/context";
 
-    onMount(async () => {
-        const { createMap } = await import('../imports/map');
-        const { createLayer } = await import('../imports/layer');
+    let container;
+    let map;
 
-        map = createMap(container);
-        layer = createLayer(collection);
-
-        map.addLayer(layer);
+    setContext(mapContextKey, {
+        getMap: () => map
     });
 
-    afterUpdate(async () => {
-        const { updateLayer } = await import('../imports/layer');
+    onMount(async () => {
+        const { createMap } = await import("../imports/map");
 
-        if (typeof layer !== "undefined") {
-            updateLayer(layer, collection);
-        }
-    })
+        map = createMap(container);
+    });
 </script>
 
-<div bind:this="{container}" class="h-100"></div>
+<div bind:this="{container}" class="h-100">
+    {#if map}
+    <slot></slot>
+    {/if}
+</div>

@@ -6,7 +6,7 @@ import Map from "ol/Map";
 import OSM from "ol/source/OSM";
 import View from "ol/View";
 
-import { renderFeatures } from "./get";
+import { onClick } from "./onClick";
 
 export function createMap(target) {
   const controls = ControlDefaults({
@@ -32,9 +32,7 @@ export function createMap(target) {
     }),
   });
 
-  map.on("click", (event) => {
-    renderFeatures(map, event.pixel);
-  });
+  map.on("click", (event) => onClick(map, event.pixel));
 
   return map;
 }

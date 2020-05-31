@@ -1,37 +1,14 @@
 <script context="module">
     import Map from "../components/Map.svelte";
-
-    export async function preload({ params }) {
-        const res = await this.fetch("combined.min.geojson");
-        const data = await res.json();
-
-        if (res.status === 200) {
-            return { data };
-        } else {
-            this.error(res.status);
-        }
-    }
+    import CombinedLayer from "../components/CombinedLayer.svelte";
 </script>
 
 <script>
-    export let data;
-    export let list;
-    export let type;
-    export let collection = JSON.parse(JSON.stringify(data));
+    let list;
+    let type;
 
-    function applyFilter(event) {
+    function applyFilter() {
         list.innerHTML = "";
-
-        collection = JSON.parse(JSON.stringify(data));
-
-        if (type !== "") {
-            collection.features.map((feature) => {
-                feature.properties.resources = Object.values(feature.properties.resources).filter((resource) => resource.type === type);
-
-                return feature;
-            });
-            collection.features = collection.features.filter((feature) => feature.properties.resources.length > 0);
-        }
     }
 </script>
 
@@ -52,10 +29,12 @@
 
 <div class="row">
     <div class="col-9">
-        <Map {collection} />
+        <Map>
+            <CombinedLayer {type} />
+        </Map>
     </div>
     <div class="col d-flex flex-column">
-        <div class="form-group mt-3">
+        <form class="form-group mt-3" autocomplete="off">
             <label for="filter-type" class="mr-2">
                 Filter:
             </label>
@@ -83,7 +62,7 @@
                 <option value="youtube">YouTube</option>
                 <option value="aparat">آپارات (Aparat)</option>
             </select>
-        </div>
+        </form>
         <div id="resources-list" bind:this={list} class="flex-fill"></div>
     </div>
 </div>

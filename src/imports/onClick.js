@@ -4,7 +4,7 @@ import { renderResources } from "./render";
 
 const levelOrder = ["country", "region", "world"];
 
-export function renderFeatures(map, pixel) {
+export function onClick(map, pixel) {
   const features = map.getFeaturesAtPixel(pixel);
 
   document.getElementById("resources-list").innerHTML = "";
