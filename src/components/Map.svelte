@@ -3,6 +3,8 @@
 
     import { map as mapContextKey } from "../imports/context";
 
+    export let callback;
+
     let container;
     let map;
 
@@ -14,6 +16,12 @@
         const { createMap } = await import("../imports/map");
 
         map = createMap(container);
+
+        map.on("rendercomplete", () => {
+            if (typeof callback !== "undefined") {
+                callback(map);
+            }
+        })
     });
 </script>
 
