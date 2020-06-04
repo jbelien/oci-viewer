@@ -2,7 +2,7 @@
 
 **Based on [OpenStreetMap Community Index](https://github.com/osmlab/osm-community-index)**
 
-This tool allows you to browse the resources the OpenStreetMap Community Index and see its features on a map.
+This tool allows you to browse the resources of the OpenStreetMap Community Index and see its features on a map.
 
 ## Run locally
 
