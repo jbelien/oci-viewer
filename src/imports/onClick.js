@@ -2,7 +2,7 @@
 
 import { renderResources } from "./render";
 
-const levelOrder = ["country", "region", "world"];
+const levelOrder = ["country", "subregion", "region", "world"];
 
 export function onClick(map, pixel) {
   const features = map.getFeaturesAtPixel(pixel);
