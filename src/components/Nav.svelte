@@ -46,13 +46,13 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbar-features">
                         <h6 class="dropdown-header">Areas where the communities are active</h6>
-                        <a class="dropdown-item disabled" href="features/africa">Africa</a>
-                        <a class="dropdown-item disabled" href="features/asia">Asia</a>
-                        <a class="dropdown-item disabled" href="features/europe">Europe</a>
-                        <!-- <a class="dropdown-item" href="features/middle-east">Middle East</a> -->
-                        <a class="dropdown-item disabled" href="features/north-america">North America</a>
-                        <a class="dropdown-item disabled" href="features/oceania">Oceania</a>
-                        <a class="dropdown-item disabled" href="features/south-america">South America</a>
+                        <a class="dropdown-item" href="features/africa">Africa</a>
+                        <a class="dropdown-item" href="features/asia">Asia</a>
+                        <a class="dropdown-item" href="features/europe">Europe</a>
+                        <a class="dropdown-item disabled" href="#middle-east">Middle East</a>
+                        <a class="dropdown-item" href="features/north-america">North America</a>
+                        <a class="dropdown-item" href="features/oceania">Oceania</a>
+                        <a class="dropdown-item" href="features/south-america">South America</a>
                     </div>
                 </li>
             </ul>
