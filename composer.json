@@ -21,7 +21,7 @@
     },
     "require-dev": {
         "filp/whoops": "^2.1.12",
-        "phpunit/phpunit": "^8.0.4",
+        "phpunit/phpunit": "^9.1.5",
         "squizlabs/php_codesniffer": "^3.3.2",
         "zendframework/zend-expressive-tooling": "^1.0",
         "zfcampus/zf-development-mode": "^3.1"
