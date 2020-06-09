@@ -1,4 +1,6 @@
 <script context="module">
+    import { stores } from '@sapper/app';
+
     import Nav from '../components/Nav.svelte';
     import Footer from '../components/Footer.svelte';
 
@@ -15,8 +17,13 @@
 </script>
 
 <script>
+    export let iframe;
     export let segment;
     export let version;
+
+    const { page } = stores();
+
+    iframe = typeof $page.query.iframe !== "undefined";
 </script>
 
 <style>
@@ -27,10 +34,12 @@
     }
 </style>
 
+{#if !iframe}
 <Nav {segment} />
+{/if}
 
 <main class="container">
-    <slot></slot>
+    <slot {iframe}></slot>
 </main>
 
 <Footer {version} />

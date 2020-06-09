@@ -41,9 +41,10 @@
 </script>
 
 <script>
-    export let group;
     export let country;
     export let features;
+    export let group;
+    export let iframe;
 
     $: activeFeatures = features.filter((feature) => feature.active);
 
@@ -94,11 +95,13 @@
         </Map>
     </div>
     <div class="col d-flex flex-column">
+        {#if !iframe}
         <h1 class="pt-3">{group.toUpperCase()}</h1>
         <h2>
             {country.toUpperCase()}
             <span class="badge badge-pill badge-info">{features.length}</span>
         </h2>
+        {/if}
         <div id="features-list" class="flex-fill">
             <div class="list-group">
                 {#each features as feature (feature.id)}
