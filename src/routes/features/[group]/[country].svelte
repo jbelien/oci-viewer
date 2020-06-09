@@ -1,4 +1,6 @@
 <script context="module">
+    import { stores } from "@sapper/app";
+
     import { extend } from "ol/extent";
     import GeoJSON from "ol/format/GeoJSON";
     import VectorLayer from "ol/layer/Vector";
@@ -41,10 +43,12 @@
 </script>
 
 <script>
+    const { page } = stores();
+
     export let country;
     export let features;
     export let group;
-    export let iframe;
+    export let iframe = typeof $page.query.iframe !== "undefined";
 
     $: activeFeatures = features.filter((feature) => feature.active);
 

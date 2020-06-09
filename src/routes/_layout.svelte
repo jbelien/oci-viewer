@@ -17,13 +17,11 @@
 </script>
 
 <script>
-    export let iframe;
-    export let segment;
-    export let version;
-
     const { page } = stores();
 
-    iframe = typeof $page.query.iframe !== "undefined";
+    export let iframe = typeof $page.query.iframe !== "undefined";
+    export let segment;
+    export let version;
 </script>
 
 <style>
@@ -39,7 +37,7 @@
 {/if}
 
 <main class="container">
-    <slot {iframe}></slot>
+    <slot></slot>
 </main>
 
 <Footer {version} />

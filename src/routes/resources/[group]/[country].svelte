@@ -1,5 +1,7 @@
 <script context="module">
-    import Resource from '../../../components/Resource.svelte';
+    import { stores } from "@sapper/app";
+
+    import Resource from "../../../components/Resource.svelte";
 
     export async function preload({ params }) {
         const group = params.group;
@@ -19,9 +21,11 @@
 </script>
 
 <script>
+    const { page } = stores();
+
     export let country;
     export let group;
-    export let iframe;
+    export let iframe = typeof $page.query.iframe !== "undefined";
     export let resources;
 </script>
 
