@@ -37,13 +37,13 @@
     }
 </style>
 
-<div class="row">
-    <div class="col-9">
+<div class="row no-gutters">
+    <div class="col-lg-9">
         <Map>
             <CombinedLayer {type} />
         </Map>
     </div>
-    <div class="col d-flex flex-column">
+    <div class="col-lg-3 d-flex flex-column px-3">
         <TypeFilter bind:type={type} {types} {list} />
         <div id="resources-list" bind:this={list} class="flex-fill"></div>
     </div>

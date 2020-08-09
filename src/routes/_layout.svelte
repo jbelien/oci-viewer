@@ -36,7 +36,7 @@
 <Nav {segment} />
 {/if}
 
-<main class="container">
+<main>
     <slot></slot>
 </main>
 

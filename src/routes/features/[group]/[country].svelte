@@ -90,15 +90,15 @@
     }
 </style>
 
-<div class="row">
-    <div class="col-8">
+<div class="row no-gutters">
+    <div class="col-lg-9">
         <Map callback={renderComplete}>
             {#each activeFeatures as feature (feature.id)}
                 <FeatureLayer layer={feature.layer} />
             {/each}
         </Map>
     </div>
-    <div class="col d-flex flex-column">
+    <div class="col-lg-3 d-flex flex-column px-3">
         {#if !iframe}
         <h1 class="pt-3">{group.toUpperCase()}</h1>
         <h2>

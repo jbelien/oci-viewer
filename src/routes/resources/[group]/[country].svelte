@@ -33,16 +33,20 @@
     <title>{country.toUpperCase()} - {group.toUpperCase()}</title>
 </svelte:head>
 
-{#if !iframe}
-<h1 class="pt-3">{group.toUpperCase()}</h1>
-<h2>
-    {country.toUpperCase()}
-    <span class="badge badge-pill badge-info">{resources.length}</span>
-</h2>
-{/if}
+<div class="container">
 
-<ul class="list-group">
-    {#each resources as resource}
-    <Resource {resource}/>
-    {/each}
-</ul>
+    {#if !iframe}
+    <h1 class="pt-3">{group.toUpperCase()}</h1>
+    <h2>
+        {country.toUpperCase()}
+        <span class="badge badge-pill badge-info">{resources.length}</span>
+    </h2>
+    {/if}
+
+    <ul class="list-group">
+        {#each resources as resource}
+        <Resource {resource}/>
+        {/each}
+    </ul>
+
+</div>
