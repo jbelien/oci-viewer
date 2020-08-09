@@ -30,8 +30,12 @@
     div.row {
         height: var(--height-main);
     }
-    div.col-lg-9 {
+    div.col-lg-8 {
         min-height: 250px;
+        max-height: 100%;
+    }
+    div.col-lg-4 {
+        max-height: 100%;
     }
 
     #resources-list {
@@ -41,12 +45,12 @@
 </style>
 
 <div class="row no-gutters">
-    <div class="col-lg-9">
+    <div class="col-lg-8">
         <Map>
             <CombinedLayer {type} />
         </Map>
     </div>
-    <div class="col-lg-3 d-flex flex-column px-3">
+    <div class="col-lg-4 d-flex flex-column px-3">
         <TypeFilter bind:type={type} {types} {list} />
         <div id="resources-list" bind:this={list} class="flex-fill"></div>
     </div>
