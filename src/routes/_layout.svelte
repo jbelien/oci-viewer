@@ -25,10 +25,12 @@
 </script>
 
 <style>
-    main {
-        --height-main: calc(100vh - var(--height-nav) - var(--height-footer));
+    @media (min-width: 992px) {
+        main {
+            --height-main: calc(100vh - var(--height-nav) - var(--height-footer));
 
-        min-height: var(--height-main);
+            min-height: var(--height-main);
+        }
     }
 </style>
 
