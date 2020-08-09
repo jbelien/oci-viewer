@@ -3,9 +3,6 @@
 </script>
 
 <style>
-    nav.navbar {
-        height: var(--height-nav);
-    }
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
