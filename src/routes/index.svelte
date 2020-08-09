@@ -30,6 +30,9 @@
     div.row {
         height: var(--height-main);
     }
+    div.col-lg-9 {
+        min-height: 250px;
+    }
 
     #resources-list {
         max-height: calc(var(--height-main) - 95px);
