@@ -17,12 +17,12 @@ jobs:
       - name: Install and Build
         run: |
           npm install
-          npm run deploy:githubio
+          npm run deploy
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: __sapper__/export/oci-viewer # The folder the action should deploy.
+          FOLDER: __sapper__/export # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
