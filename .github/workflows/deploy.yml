@@ -24,5 +24,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: __sapper__/export # The folder the action should deploy.
+          FOLDER: __sapper__/export/oci-viewer # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
