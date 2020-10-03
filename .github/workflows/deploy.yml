@@ -17,7 +17,7 @@ jobs:
       - name: Install and Build
         run: |
           npm install
-          npm run deploy
+          npm run deploy:githubio
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
