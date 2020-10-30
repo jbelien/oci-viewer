@@ -26,7 +26,7 @@ glob
 
     array
       .sort((a, b) => (b.order || -Infinity) - (a.order || -Infinity))
-      .map((resource) => {
+      .forEach((resource) => {
         if (typeof resource.languageCodes !== "undefined") {
           resource.languageCodes = resource.languageCodes.map((code) => {
             return { code, name: cldr.extractLanguageDisplayNames("en")[code] };
