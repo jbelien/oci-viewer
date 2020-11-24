@@ -1,1 +1,0 @@
-[{"id":"OSM-CN-telegram","type":"telegram","locationSet":{"include":["cn"]},"languageCodes":[{"code":"zh","name":"Chinese"}],"name":"OpenStreetMap China Telegram","description":"A Telegram group for the OSM Chinese community: {url}","url":"https://t.me/osmchina","order":5}]
