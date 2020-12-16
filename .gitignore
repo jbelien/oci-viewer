@@ -6,5 +6,5 @@ yarn-error.log
 /__sapper__/
 /data/
 /static/icons/
-/static/combined.min.geojson
+/static/completeFeatureCollection.min.json
 /static/ol.css

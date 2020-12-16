@@ -10,7 +10,7 @@
     const map = getMap();
 
     onMount(async () => {
-        const res = await fetch("combined.min.geojson");
+        const res = await fetch("completeFeatureCollection.min.json");
 
         if (res.status === 200) {
             const collection = await res.json();
