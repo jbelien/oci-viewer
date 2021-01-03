@@ -23,7 +23,7 @@
     "cldr": "^5.8.0",
     "compression": "^1.7.4",
     "ol": "^6.5.0",
-    "osm-community-index": "^3.0.1",
+    "osm-community-index": "^3.1.0",
     "polka": "next",
     "sirv": "^1.0.10"
   },
