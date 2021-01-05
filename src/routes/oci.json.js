@@ -7,6 +7,7 @@ const types = {
   facebook: "Facebook",
   forum: "Forum",
   github: "GitHub",
+  gitlab: "GitLab",
   group: "Group",
   irc: "IRC",
   mailinglist: "Mailing-list",
