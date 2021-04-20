@@ -21,7 +21,7 @@
     "deploy:githubio": "run-s oci ol:css export:githubio"
   },
   "dependencies": {
-    "cldr": "^6.0.0",
+    "cldr": "^6.1.0",
     "compression": "^1.7.4",
     "ol": "^6.5.0",
     "osm-community-index": "^3.1.2",
