@@ -1,7 +1,11 @@
 const cldr = require("cldr");
 const fs = require("fs");
 const glob = require("glob");
+const resolveStrings = require("osm-community-index/lib/resolve_strings");
 const path = require("path");
+
+const defaultsContent = fs.readFileSync("node_modules/osm-community-index/defaults.json", "utf8");
+const defaults = JSON.parse(defaultsContent);
 
 glob
   .sync("node_modules/osm-community-index/resources/**/*", {})
@@ -32,6 +36,13 @@ glob
             return { code, name: cldr.extractLanguageDisplayNames("en")[code] };
           });
         }
+
+        const resolvedStrings = resolveStrings(resource, defaults.defaults);
+        if (!resolvedStrings.name)         { throw new Error('Cannot resolve a value for name'); }
+        if (!resolvedStrings.description)  { throw new Error('Cannot resolve a value for description'); }
+        if (!resolvedStrings.url)          { throw new Error('Cannot resolve a value for url'); }
+
+        resource.resolved = resolvedStrings;
       });
 
     if (array.length > 0) {
