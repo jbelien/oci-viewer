@@ -22,6 +22,8 @@ export function renderResources(features, title) {
     );
 
     resources.forEach((resource) => {
+      const { name, url } = resource.resolved;
+
       const li = document.createElement("li");
       li.className = "d-flex";
 
@@ -34,9 +36,9 @@ export function renderResources(features, title) {
       // li.append(img);
 
       const a = document.createElement("a");
-      a.href = resource.url;
+      a.href = url;
       a.target = "_blank";
-      a.append(img, resource.name);
+      a.append(img, name);
 
       li.append(a);
       ul.append(li);

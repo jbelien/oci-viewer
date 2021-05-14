@@ -8,8 +8,8 @@
         <div class="media-body">
             <div class="d-flex justify-content-between">
                 <h3 class="h5 mt-0">
-                    <a target="_blank" href="{resource.url}">
-                        {resource.name}
+                    <a target="_blank" href="{resource.resolved.url}">
+                        {resource.resolved.name}
                     </a>
                 </h3>
                 {#if resource.languageCodes}
@@ -20,9 +20,9 @@
                 </div>
                 {/if}
             </div>
-            <p class="mb-0">{resource.description.replace(/\{(.+?)\}/, function (match, p1) { return resource[p1]; })}</p>
-            {#if resource.extendedDescription}
-            <p class="mb-0 small">{resource.extendedDescription.replace(/\{(.+?)\}/, function (match, p1) { return resource[p1]; })}</p>
+            <p class="mb-0">{resource.resolved.description.replace(/\{(.+?)\}/, function (match, p1) { return resource[p1]; })}</p>
+            {#if resource.resolved.extendedDescription}
+            <p class="mb-0 small">{resource.resolved.extendedDescription.replace(/\{(.+?)\}/, function (match, p1) { return resource[p1]; })}</p>
             {/if}
         </div>
     </div>
