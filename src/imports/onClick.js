@@ -1,8 +1,7 @@
 "use strict";
 
+import { levels } from "./levels";
 import { renderResources } from "./render";
-
-const levelOrder = ["country", "subregion", "region", "world"];
 
 export function onClick(map, pixel) {
   const features = map.getFeaturesAtPixel(pixel);
@@ -29,7 +28,7 @@ export function onClick(map, pixel) {
         return aName < bName ? -1 : aName > bName ? 1 : 0;
       }
 
-      return levelOrder.indexOf(aProperties.level) - levelOrder.indexOf(bProperties.level);
+      return levels.indexOf(bProperties.level) - levels.indexOf(aProperties.level);
     })
     .forEach((feature) => {
       const name = feature.getProperties().nameEn;
