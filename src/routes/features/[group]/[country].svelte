@@ -99,7 +99,7 @@
 
 <div class="row no-gutters">
     <div class="col-lg-8">
-        <Map callback={renderComplete}>
+        <Map callbackRender={renderComplete}>
             {#each activeFeatures as feature (feature.id)}
                 <FeatureLayer layer={feature.layer} />
             {/each}

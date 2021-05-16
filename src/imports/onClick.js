@@ -3,7 +3,8 @@
 import { levels } from "./levels";
 import { renderResources } from "./render";
 
-export function onClick(map, pixel) {
+export function onClick(map, coordinate) {
+  const pixel = map.getPixelFromCoordinate(coordinate);
   const features = map.getFeaturesAtPixel(pixel);
 
   document.getElementById("resources-list").innerHTML = "";

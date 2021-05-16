@@ -6,9 +6,7 @@ import Map from "ol/Map";
 import OSM from "ol/source/OSM";
 import View from "ol/View";
 
-import { onClick } from "./onClick";
-
-export function createMap(target) {
+export function createMap(target, options) {
   const controls = ControlDefaults({
     attribution: false,
   }).extend([
@@ -27,12 +25,10 @@ export function createMap(target) {
     ],
     target,
     view: new View({
-      center: [0, 0],
-      zoom: 0,
+      center: options.center,
+      zoom: options.zoom,
     }),
   });
-
-  map.on("click", (event) => onClick(map, event.pixel));
 
   return map;
 }
