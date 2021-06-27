@@ -3,6 +3,9 @@
     import CombinedLayer from "../components/CombinedLayer.svelte";
     import TypeFilter from "../components/TypeFilter.svelte";
 
+    import { fromLonLat, toLonLat } from "ol/proj";
+    import { onMount } from "svelte";
+
     export async function preload({ params }) {
         const res = await this.fetch("oci.json");
         const { types } = await res.json();
@@ -16,9 +19,6 @@
 </script>
 
 <script>
-    import { fromLonLat, toLonLat } from 'ol/proj';
-    import { onMount } from "svelte";
-
     export let types;
 
     let list;
