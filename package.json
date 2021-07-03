@@ -16,10 +16,7 @@
     "export": "sapper export --legacy",
     "export:githubio": "GITHUBIO=true sapper export --legacy --basepath oci-viewer",
     "start": "node __sapper__/build",
-    "lint": "eslint src/**/*.{js,svelte} scripts/*.js",
-    "lint:fix": "eslint --fix src/**/*.{js,svelte} scripts/*.js",
-    "deploy": "run-s oci ol:css export",
-    "deploy:githubio": "run-s oci ol:css export:githubio"
+    "lint": "eslint src/**/*.{js,svelte} scripts/*.js"
   },
   "dependencies": {
     "cldr": "^7.0.0",
