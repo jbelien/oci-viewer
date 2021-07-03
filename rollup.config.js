@@ -21,6 +21,9 @@ const onwarn = (warning, onwarn) => {
   );
 };
 
+const configServerOutput = config.server.output();
+configServerOutput.format = 'esm';
+
 export default {
   client: {
     input: config.client.input(),
@@ -79,7 +82,7 @@ export default {
 
   server: {
     input: config.server.input(),
-    output: config.server.output(),
+    output: configServerOutput,
     plugins: [
       replace({
         "process.browser": false,
