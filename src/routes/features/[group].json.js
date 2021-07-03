@@ -21,30 +21,30 @@ function getCountries(group) {
   return countries;
 }
 
-function getGlobalResources(group) {
-  let resources = [];
+function getGlobalFeatures(group) {
+  let features = [];
 
   if (fs.existsSync(`data/features/${group}.json`) === true) {
     const content = fs.readFileSync(`data/features/${group}.json`, "utf-8");
 
-    resources = JSON.parse(content);
+    features = JSON.parse(content);
   }
 
-  return resources;
+  return features;
 }
 
 export function get(req, res, next) {
   const { group } = req.params;
 
   const countries = getCountries(group);
-  const resources = getGlobalResources(group);
+  const features = getGlobalFeatures(group);
 
-  if (countries.length > 0 || resources.length > 0) {
+  if (countries.length > 0 || features.length > 0) {
     res.writeHead(200, {
       "Content-Type": "application/json",
     });
 
-    res.end(JSON.stringify({ countries, resources }));
+    res.end(JSON.stringify({ countries, features }));
   } else {
     res.writeHead(404, {
       "Content-Type": "application/json",

@@ -4,8 +4,10 @@ import path from "path";
 function getFeatures(group, country) {
   let features = [];
 
-  if (fs.existsSync(`data/features/${group}/${country}.json`) === true) {
-    const contents = fs.readFileSync(`data/features/${group}/${country}.json`, "utf-8");
+  const file = `data/features/` + (country === group ? `${group}.json` : `${group}/${country}.json`);
+
+  if (fs.existsSync(file) === true) {
+    const contents = fs.readFileSync(file, "utf-8");
 
     features = JSON.parse(contents).map((feature) => {
       const { id } = feature;
