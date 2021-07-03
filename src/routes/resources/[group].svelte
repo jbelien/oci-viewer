@@ -30,6 +30,16 @@
 
     <h1 class="pt-3">{group.toUpperCase()}</h1>
 
+    {#if data.resources.length > 0}
+    <h2>Resources</h2>
+    <ul class="list-group">
+        {#each data.resources as resource}
+        <Resource {resource}/>
+        {/each}
+    </ul>
+    <hr>
+    {/if}
+
     {#if data.countries.length > 0}
     <h2>Countries</h2>
     <ul>
@@ -38,15 +48,6 @@
             <a rel="prefetch" href="resources/{group}/{country.slug}">{country.name}</a>
             <span class="badge badge-pill badge-info">{country.count}</span>
         </li>
-        {/each}
-    </ul>
-    {/if}
-
-    {#if data.resources.length > 0}
-    <h2>Resources</h2>
-    <ul class="list-group">
-        {#each data.resources as resource}
-        <Resource {resource}/>
         {/each}
     </ul>
     {/if}
