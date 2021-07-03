@@ -1,11 +1,10 @@
-const cldr = require("cldr");
-const fs = require("fs");
-const glob = require("glob");
-const resolveStrings = require("osm-community-index/lib/resolve_strings");
-const path = require("path");
+import cldr from "cldr";
+import glob from "glob";
+import fs from "node:fs";
+import path from "node:path";
+import { defaultsJSON, resolveStrings } from "../build.mjs";
 
-const defaultsContent = fs.readFileSync("node_modules/osm-community-index/defaults.json", "utf8");
-const defaults = JSON.parse(defaultsContent);
+const defaults = defaultsJSON.default;
 
 glob
   .sync("node_modules/osm-community-index/resources/**/*", {})

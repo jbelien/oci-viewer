@@ -1,6 +1,6 @@
-const fs = require("fs");
-const glob = require("glob");
-const path = require("path");
+import fs from "node:fs";
+import glob from "glob";
+import path from "node:path";
 
 glob
   .sync("node_modules/osm-community-index/features/**/*", {})
