@@ -32,9 +32,10 @@ export function onClick(map, coordinate) {
       return levels.indexOf(bProperties.level) - levels.indexOf(aProperties.level);
     })
     .forEach((feature) => {
-      const name = feature.getProperties().nameEn;
+      const { emojiFlag, level, nameEn } = feature.getProperties();
 
-      const resourcesList = renderResources([feature], name);
+      const title = level === 'country' ? `${emojiFlag} ${nameEn}` : nameEn;
+      const resourcesList = renderResources([feature], title);
 
       if (typeof resourcesList !== "undefined") {
         document.getElementById("resources-list").append(resourcesList);
