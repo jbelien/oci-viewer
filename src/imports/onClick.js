@@ -1,5 +1,7 @@
 "use strict";
 
+import { feature as getFeature, isIn, isInEuropeanUnion } from "@ideditor/country-coder";
+
 import { levels } from "./levels";
 import { renderResources } from "./render";
 
@@ -32,7 +34,19 @@ export function onClick(map, coordinate) {
       return levels.indexOf(bProperties.level) - levels.indexOf(aProperties.level);
     })
     .forEach((feature) => {
-      const { emojiFlag, level, nameEn } = feature.getProperties();
+      const { emojiFlag, groups, level, nameEn } = feature.getProperties();
+      console.log(feature.getProperties());
+      console.log(isIn(feature.getId(), '150'), isInEuropeanUnion(feature.getId()));
+
+      console.log(groups);
+      console.log(groups.map(g => getFeature(g)));
+      console.log(groups.map(g => getFeature(g)));
+
+      const region = groups.map(g => getFeature(g)).find(g => {
+        console.log(g);
+        return g.properties.level === 'region';
+      });
+      console.log(region);
 
       const title = level === 'country' ? `${emojiFlag} ${nameEn}` : nameEn;
       const resourcesList = renderResources([feature], title);
