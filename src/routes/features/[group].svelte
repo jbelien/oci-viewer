@@ -28,8 +28,6 @@
 
     <h1 class="pt-3">{group.toUpperCase()}</h1>
 
-    {@debug data}
-
     {#if data.features.length > 0}
     <ul>
         <li>
