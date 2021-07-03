@@ -1,6 +1,4 @@
 <script context="module">
-    import Resource from '../../components/Resource.svelte';
-
     export async function preload({ params }) {
         const group = params.group;
 
@@ -8,7 +6,7 @@
         const data = await res.json();
 
         if (res.status === 200) {
-            data.resources.sort((a, b) => (b.order || 0) - (a.order || 0));
+            data.features.sort((a, b) => (b.order || 0) - (a.order || 0));
 
             return { group, data };
         } else {
@@ -30,6 +28,17 @@
 
     <h1 class="pt-3">{group.toUpperCase()}</h1>
 
+    {@debug data}
+
+    {#if data.features.length > 0}
+    <ul>
+        <li>
+            <a rel="prefetch" href="features/{group}/{group}">{group.toUpperCase()}</a>
+            <span class="badge badge-pill badge-info">{data.features.length}</span>
+        </li>
+    </ul>
+    {/if}
+
     {#if data.countries.length > 0}
     <h2>Countries</h2>
     <ul>
@@ -38,15 +47,6 @@
             <a rel="prefetch" href="features/{group}/{country.slug}">{country.name}</a>
             <span class="badge badge-pill badge-info">{country.count}</span>
         </li>
-        {/each}
-    </ul>
-    {/if}
-
-    {#if data.resources.length > 0}
-    <h2>Resources</h2>
-    <ul class="list-group">
-        {#each data.resources as resource}
-        <Resource {resource}/>
         {/each}
     </ul>
     {/if}
