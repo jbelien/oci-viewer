@@ -21,7 +21,7 @@
   "dependencies": {
     "cldr": "^7.1.0",
     "compression": "^1.7.4",
-    "ol": "^6.5.0",
+    "ol": "^6.15.1",
     "osm-community-index": "^5.1.2",
     "polka": "next",
     "sirv": "^1.0.12"
