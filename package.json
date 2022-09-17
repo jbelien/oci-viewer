@@ -22,7 +22,7 @@
     "cldr": "^7.2.0",
     "compression": "^1.7.4",
     "ol": "^6.5.0",
-    "osm-community-index": "^5.1.2",
+    "osm-community-index": "^5.2.0",
     "polka": "next",
     "sirv": "^2.0.2"
   },
@@ -51,6 +51,6 @@
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
     "sapper": "^0.29.3",
-    "svelte": "^3.41.0"
+    "svelte": "^3.50.1"
   }
 }
