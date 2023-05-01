@@ -24,7 +24,7 @@
     "ol": "^7.3.0",
     "osm-community-index": "^5.5.2",
     "polka": "next",
-    "sirv": "^2.0.2"
+    "sirv": "^2.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
