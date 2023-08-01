@@ -23,7 +23,7 @@ jobs:
       - run: npm run ol:css
       - run: npm run export
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: __sapper__/export
 
