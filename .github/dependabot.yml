@@ -3,12 +3,7 @@ updates:
   - package-ecosystem: npm
     directory: "/"
     schedule:
-      interval: weekly
-    open-pull-requests-limit: 10
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "monthly"
+      interval: monthly
     groups:
       babel:
         applies-to: version-updates
@@ -24,3 +19,7 @@ updates:
         patterns:
           - "@rollup/*"
           - "rollup*"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: monthly
