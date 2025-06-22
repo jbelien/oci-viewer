@@ -9,3 +9,18 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    groups:
+      babel:
+        applies-to: version-updates
+        patterns:
+          - "@babel/*"
+      eslint:
+        applies-to: version-updates
+        patterns:
+          - "@eslint*"
+          - "eslint*"
+      rollup:
+        applies-to: version-updates
+        patterns:
+          - "@rollup/*"
+          - "rollup*"
