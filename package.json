@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "oci": "run-p oci:*",
-    "oci:combined": "cp node_modules/osm-community-index/dist/completeFeatureCollection.min.json static/",
+    "oci:combined": "cp node_modules/osm-community-index/dist/json/completeFeatureCollection.min.json static/",
     "oci:feature": "rm -rf static/data/features/ && node scripts/build-feature.js",
     "oci:icons": "rm -rf static/icons/ && mkdir -p static/icons/ && cp node_modules/osm-community-index/dist/img/* static/icons/",
     "oci:resource": "rm -rf static/data/resources/ && node scripts/build-resource.js",
