@@ -19,7 +19,7 @@
     "lint": "eslint src/**/*.{js,svelte} scripts/*.js"
   },
   "dependencies": {
-    "cldr": "^7.9.0",
+    "cldr": "^8.0.0",
     "compression": "^1.8.1",
     "ol": "^7.5.2",
     "osm-community-index": "^6.0.0",
