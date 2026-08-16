@@ -8,6 +8,12 @@ updates:
   - package-ecosystem: npm
     directory: "/"
     schedule:
+      interval: daily
+    allow:
+      - dependency-name: osm-community-index
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
       interval: monthly
     ignore:
       - dependency-name: "*"
