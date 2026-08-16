@@ -26,7 +26,7 @@ jobs:
       - run: npm run ol:css
       - run: npm run export
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: __sapper__/export
 
