@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "cldr": "^7.9.0",
-    "compression": "^1.8.1",
+    "compression": "^1.8.2",
     "ol": "^7.5.2",
     "osm-community-index": "^6.2.0",
     "polka": "next",
